@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 const About = () => {
   const education = [
@@ -11,13 +12,13 @@ const About = () => {
       icon: "⚙️"
     },
     {
-      title: "Engenharia de Controle e Automação",
+      title: "Eng. Controle e Automação",
       institution: "Una",
       year: "2020",
       icon: "🎓"
     },
     {
-      title: "Pós-graduação em Engenharia de Software",
+      title: "Pós em Eng. de Software",
       institution: "Anhanguera",
       year: "2023",
       icon: "💻"
@@ -25,21 +26,20 @@ const About = () => {
   ];
 
   const skills = [
-    "Automações e LLMs com N8N",
-    "Make, Docker",
-    "APIs REST e integrações entre sistemas",
-    "Bancos de dados (Postgres/SQL)",
-    "LangChain (fluxo de IA orquestrado)",
-    "RAG & vetores",
-    "CRM & BI (modelagem, dashboards)",
-    "Python e JavaScript"
+    "N8N",
+    "Make",
+    "APIs REST",
+    "Bancos de dados",
+    "LangChain",
+    "CRM & BI",
+    "Python / JavaScript"
   ];
 
   const personality = [
     { label: "MBTI", value: "INTJ-T" },
     { label: "DISC", value: "DC" },
     { label: "Eneagrama", value: "5 asa 4" },
-    { label: "Big Five", value: "Abertura 42, Conscienciosidade 68, Extroversão 49, Amabilidade 34, Neuroticism 71" }
+    { label: "Big Five", value: "O42 C68 E49 A34 N71" }
   ];
 
   return (
@@ -49,6 +49,7 @@ const About = () => {
       <div className="absolute inset-0 bg-grid-white/[0.02] bg-[size:50px_50px]"></div>
       
       <div className="container mx-auto px-6 relative z-10">
+        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -56,137 +57,163 @@ const About = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Sobre{' '}
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-              Mim
+              Sobre mim
             </span>
           </h2>
+          <p className="text-xl text-slate-300 max-w-4xl mx-auto leading-relaxed">
+            Gestor de automações (N8N / Make), Analista de CRM & BI e estrategista de marketing com 5 anos de experiência.
+          </p>
         </motion.div>
 
-        <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 items-start">
-            {/* História Principal */}
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="space-y-6"
-            >
-              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-8">
-                <h3 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
-                  <span className="text-3xl">👨‍💻</span>
-                  Minha Trajetória
-                </h3>
-                
-                <div className="space-y-4 text-slate-300 leading-relaxed">
-                  <p>
-                    Minha base vem da <strong className="text-blue-400">engenharia</strong> - formado em Controle e Automação pela Una (2020), com técnico em Eletromecânica pelo SENAI (2014) e pós-graduação em Engenharia de Software (Anhanguera, 2023). Essa formação me deu pensamento estruturado, entendimento de processos e base técnica sólida. Durante a pós, estagiei como desenvolvedor, então <strong className="text-blue-400">não comecei do zero - já tinha código antes de ir pro low-code</strong>. De janeiro/2022 a junho/2024, atuei como <strong className="text-orange-400">gestor de tráfego e estrategista de marketing</strong> (Meta Ads, Google Ads, GA4, GTM). A partir de 06/2024, migrei para o mercado de <strong className="text-purple-400">desenvolvimento, automações e IA</strong>, focando em <strong className="text-cyan-400">N8N</strong>, Make, APIs REST, bancos de dados e integração com CRM, evoluindo depois para <strong className="text-emerald-400">CRM com foco em BI</strong>.
-                  </p>
-                  
-                  <p className="text-lg font-medium text-white">
-                    Hoje meu foco principal é <strong className="text-cyan-400">Gestão de Automações / Dev low-code</strong>, depois <strong className="text-emerald-400">CRM & BI</strong>; marketing e tráfego ficam como competência de apoio, mas tenho ~5 anos de experiência.
-                  </p>
-                </div>
-              </div>
+        <div className="max-w-4xl mx-auto space-y-8">
+          {/* Card com Foto e Informações Pessoais */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true }}
+          >
+            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-6">
+               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
+                 {/* Foto - Menor */}
+                 <div className="text-center">
+                   <div className="relative w-40 h-40 mx-auto mb-4">
+                     <div className="absolute inset-0 bg-gradient-to-br from-blue-400/20 to-purple-400/20 rounded-2xl blur-lg"></div>
+                     <div className="relative w-full h-full bg-white/10 rounded-2xl border border-white/20 overflow-hidden">
+                       <Image
+                         src="/lucio.svg"
+                         alt="Lucio Henrique"
+                         fill
+                         className="object-cover"
+                         sizes="(max-width: 768px) 100vw, 160px"
+                         priority
+                       />
+                     </div>
+                   </div>
+                   <h4 className="text-xl font-bold text-white mb-1">Lucio Henrique</h4>
+                   <p className="text-blue-400 font-medium text-sm">Gestor de Automações & CRM/BI</p>
+                 </div>
 
-              {/* Perfil Comportamental */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                viewport={{ once: true }}
-                className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-8"
-              >
-                <h3 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
-                  <span className="text-3xl">🧠</span>
-                  Perfil Comportamental
-                </h3>
-                
-                <div className="grid grid-cols-2 gap-4 mb-4">
-                  {personality.slice(0, 3).map((item, index) => (
-                    <div key={index} className="bg-white/5 rounded-xl p-3">
-                      <div className="text-sm text-slate-400">{item.label}</div>
-                      <div className="text-white font-semibold">{item.value}</div>
-                    </div>
-                  ))}
-                </div>
-                
-                <div className="bg-white/5 rounded-xl p-3 mb-4">
-                  <div className="text-sm text-slate-400">Big Five</div>
-                  <div className="text-white font-semibold text-sm">{personality[3].value}</div>
-                </div>
-                
-                <p className="text-slate-300 text-sm leading-relaxed">
-                  Perfil analítico e orientado a solução, que gosta de estruturar processos e automatizar o que é repetitivo. Combino pensamento estratégico com execução técnica detalhada.
+                 {/* Formação - Compacta */}
+                 <div>
+                   <h3 className="text-lg font-bold text-white mb-3 flex items-center gap-2">
+                     <span className="text-lg">🎓</span>
+                     Formação
+                   </h3>
+                   
+                   <div className="space-y-2">
+                     {education.map((edu, index) => (
+                       <motion.div
+                         key={index}
+                         initial={{ opacity: 0, y: 10 }}
+                         whileInView={{ opacity: 1, y: 0 }}
+                         transition={{ duration: 0.4, delay: 0.1 * index }}
+                         viewport={{ once: true }}
+                         className="bg-white/5 rounded-lg p-2 border border-white/5"
+                       >
+                         <div className="flex items-start gap-2">
+                           <span className="text-sm">{edu.icon}</span>
+                           <div className="flex-1">
+                             <h4 className="text-white font-medium text-xs leading-tight">{edu.title}</h4>
+                             <p className="text-slate-400 text-xs">{edu.institution}</p>
+                             <span className="text-blue-400 text-xs font-medium">{edu.year}</span>
+                           </div>
+                         </div>
+                       </motion.div>
+                     ))}
+                   </div>
+                 </div>
+
+                 {/* Competências - Compacta */}
+                 <div>
+                   <h3 className="text-lg font-bold text-white mb-3 flex items-center gap-2">
+                     <span className="text-lg">⚡</span>
+                     Competências
+                   </h3>
+                   
+                   <div className="space-y-1">
+                     {skills.map((skill, index) => (
+                       <motion.div
+                         key={index}
+                         initial={{ opacity: 0, x: 10 }}
+                         whileInView={{ opacity: 1, x: 0 }}
+                         transition={{ duration: 0.4, delay: 0.05 * index }}
+                         viewport={{ once: true }}
+                         className="flex items-center gap-2 bg-white/5 rounded-md p-1.5 border border-white/5"
+                       >
+                         <div className="w-1 h-1 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full"></div>
+                         <span className="text-slate-300 text-xs font-medium">{skill}</span>
+                       </motion.div>
+                     ))}
+                   </div>
+                 </div>
+               </div>
+             </div>
+          </motion.div>
+
+          {/* Card com Texto Principal */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            viewport={{ once: true }}
+          >
+            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-8">
+              <h3 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+                <span className="text-3xl">👨‍💻</span>
+                Minha Trajetória
+              </h3>
+              
+              <div className="space-y-4 text-slate-300 leading-relaxed text-lg">
+                <p>
+                  Sou o Lucio Henrique, desenvolvedor e arquiteto de automações com base em engenharia. Sou técnico em <strong className="text-blue-400">Eletromecânica (SENAI, 2014)</strong>, formado em <strong className="text-blue-400">Engenharia de Controle e Automação (Una, 2020)</strong> e pós-graduado em <strong className="text-blue-400">Engenharia de Software (Anhanguera, 2023)</strong>, o que me deu uma base forte de lógica, processos e integração entre sistemas. Durante a pós eu estagiei como desenvolvedor, então antes de ir para o low-code eu já tinha contato com código e boas práticas.
                 </p>
-              </motion.div>
-            </motion.div>
+                <p>
+                  De jan/2022 a jun/2024 atuei no marketing como <strong className="text-orange-400">gestor de tráfego e estrategista</strong>, o que me deu visão prática de funil, origem de lead, mensuração e das dores reais do comercial. A partir de 2024 passei a focar no que mais gosto: <strong className="text-purple-400">desenvolver soluções de automação e IA de ponta a ponta</strong> — não só conectando em CRM, mas criando fluxos completos com <strong className="text-cyan-400">N8N</strong>, Make, APIs REST, bancos de dados SQL e NoSQL, Docker e orquestração de LLMs com LangChain para que sistemas, atendimentos e dados conversem entre si.
+                </p>
+                <p>
+                  Hoje eu desenho e opero fluxos inteligentes e <strong className="text-emerald-400">agentes conversacionais de atendimento e pré-venda (SDR e Closer)</strong> totalmente integrados ao WhatsApp, CRM e bancos de dados, usando <strong className="text-cyan-400">N8N</strong>, Make, Docker, APIs REST e bancos SQL/NoSQL, além de orquestradores de IA como <strong className="text-purple-400">LangChain/LangGraph</strong>, RAG, ETL/ELT e pipelines de dados. Esses agentes não ficam soltos: eles registram e atualizam conversa no CRM, preenchem campos e funis, disparam follow-ups, fazem handoff para humano e podem consumir fontes externas (Postgres/Supabase) para falar com contexto do negócio. Como muitas dessas automações terminam em <strong className="text-orange-400">CRM e BI</strong>, também estruturo jornadas, segmentação e dashboards para marketing/vendas quando necessário, mas isso entra como complemento técnico do mesmo ecossistema que inclui <strong className="text-blue-400">Python, JavaScript</strong>, vibe code (Cursor, Trae), automações internas e integrações event-driven para deixar tudo observável e escalável.
+                </p>
+              </div>
+            </div>
+          </motion.div>
 
-            {/* Sidebar com Formação e Competências */}
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="space-y-8"
-            >
-              {/* Formação */}
-              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-8">
-                <h3 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
-                  <span className="text-3xl">🎓</span>
-                  Formação
-                </h3>
-                
-                <div className="space-y-4">
-                  {education.map((edu, index) => (
-                    <motion.div
-                      key={index}
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.5, delay: 0.1 * index }}
-                      viewport={{ once: true }}
-                      className="bg-white/5 rounded-xl p-4 border border-white/5"
-                    >
-                      <div className="flex items-start gap-3">
-                        <span className="text-2xl">{edu.icon}</span>
-                        <div className="flex-1">
-                          <h4 className="text-white font-semibold text-sm">{edu.title}</h4>
-                          <p className="text-slate-400 text-sm">{edu.institution}</p>
-                          <span className="text-blue-400 text-xs font-medium">{edu.year}</span>
-                        </div>
-                      </div>
-                    </motion.div>
-                  ))}
+          {/* Card com Perfil Comportamental */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-6">
+                <div className="flex flex-col md:flex-row gap-6">
+                  {/* Título e Descrição */}
+                  <div className="flex-1">
+                    <h3 className="text-xl font-bold text-white mb-3 flex items-center gap-2">
+                      <span className="text-xl">🧠</span>
+                      Perfil Comportamental
+                    </h3>
+                    <p className="text-slate-300 leading-relaxed text-sm">
+                      Perfil analítico e estruturado, orientado a solução e automação do que é repetitivo. Combino pensamento estratégico com execução técnica detalhada.
+                    </p>
+                  </div>
+                  
+                  {/* Testes de Personalidade */}
+                  <div className="flex-shrink-0">
+                    <div className="grid grid-cols-2 gap-2">
+                       {personality.map((item, index) => (
+                         <div key={index} className="bg-white/5 rounded-lg p-2 text-center min-w-[80px]">
+                           <div className="text-xs text-slate-400 font-medium">{item.label}</div>
+                           <div className="text-white font-semibold text-sm">{item.value}</div>
+                         </div>
+                       ))}
+                     </div>
+                  </div>
                 </div>
               </div>
-
-              {/* Competências Principais */}
-              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-8">
-                <h3 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
-                  <span className="text-3xl">⚡</span>
-                  Competências Principais
-                </h3>
-                
-                <div className="space-y-3">
-                  {skills.map((skill, index) => (
-                    <motion.div
-                      key={index}
-                      initial={{ opacity: 0, x: 20 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.5, delay: 0.05 * index }}
-                      viewport={{ once: true }}
-                      className="flex items-center gap-3 bg-white/5 rounded-xl p-3 border border-white/5"
-                    >
-                      <div className="w-2 h-2 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full"></div>
-                      <span className="text-slate-300 text-sm">{skill}</span>
-                    </motion.div>
-                  ))}
-                </div>
-              </div>
-            </motion.div>
-          </div>
+          </motion.div>
         </div>
 
         {/* Floating Elements */}
