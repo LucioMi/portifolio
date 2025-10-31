@@ -14,14 +14,14 @@ const Skills = () => {
       borderColor: "border-blue-400/30",
       isPrimary: true,
       skills: [
-        { name: "n8n", level: 95, description: "Automações complexas e integrações" },
-        { name: "Make (Zapier)", level: 90, description: "Workflows e conectores" },
-        { name: "APIs REST", level: 88, description: "Integração entre sistemas" },
-        { name: "Docker", level: 85, description: "Containerização e deploy" },
-        { name: "PostgreSQL", level: 82, description: "Banco de dados relacional" },
-        { name: "MongoDB", level: 78, description: "Banco de dados NoSQL" },
-        { name: "Webhooks", level: 92, description: "Comunicação em tempo real" },
-        { name: "JSON/XML", level: 90, description: "Manipulação de dados" }
+        { name: "n8n", level: "Domínio", description: "Automações complexas e integrações" },
+        { name: "Make (Zapier)", level: "Domínio", description: "Workflows e conectores" },
+        { name: "APIs REST", level: "Domínio", description: "Integração entre sistemas" },
+        { name: "PostgreSQL", level: "Domínio", description: "Banco de dados relacional" },
+        { name: "Webhooks", level: "Domínio", description: "Comunicação em tempo real" },
+        { name: "JSON/XML", level: "Domínio", description: "Manipulação de dados" },
+        { name: "Docker", level: "Avançado", description: "Containerização e deploy" },
+        { name: "MongoDB", level: "Avançado", description: "Banco de dados NoSQL" }
       ]
     },
     {
@@ -34,34 +34,34 @@ const Skills = () => {
       borderColor: "border-emerald-400/30",
       isPrimary: false,
       skills: [
-        { name: "HubSpot", level: 92, description: "CRM completo e automações" },
-        { name: "Pipedrive", level: 88, description: "Gestão de pipeline de vendas" },
-        { name: "Power BI", level: 85, description: "Dashboards e relatórios" },
-        { name: "SQL", level: 80, description: "Consultas e análise de dados" },
-        { name: "Google Analytics", level: 87, description: "Análise de comportamento" },
-        { name: "Segmentação", level: 90, description: "Qualificação de leads" },
-        { name: "Lead Scoring", level: 88, description: "Pontuação automática" },
-        { name: "Funis de Vendas", level: 93, description: "Modelagem e otimização" }
+        { name: "Funis de Vendas", level: "Avançado", description: "Modelagem e otimização" },
+        { name: "Segmentação", level: "Avançado", description: "Qualificação de leads" },
+        { name: "HubSpot", level: "Avançado", description: "CRM completo e automações" },
+        { name: "Dashboards Looker/BI", level: "Avançado", description: "Relatórios e visualizações" },
+        { name: "Lead Scoring", level: "Avançado", description: "Pontuação automática" },
+        { name: "Pipedrive", level: "Operacional", description: "Gestão de pipeline de vendas" },
+        { name: "SQL", level: "Operacional", description: "Consultas e análise de dados" },
+        { name: "Google Analytics", level: "Operacional", description: "Análise de comportamento" }
       ]
     },
     {
       id: 3,
-      title: "Marketing & Aquisição",
-      subtitle: "Tráfego e Conversão",
+      title: "Marketing (5 anos de experiência)",
+      subtitle: "Competência de apoio",
       icon: "🎯",
-      gradient: "from-orange-600 to-pink-600",
-      bgGradient: "from-orange-500/10 to-pink-500/10",
-      borderColor: "border-orange-400/30",
+      gradient: "from-green-600 to-emerald-600",
+      bgGradient: "from-green-500/10 to-emerald-500/10",
+      borderColor: "border-green-400/30",
       isPrimary: false,
       skills: [
-        { name: "Google Ads", level: 85, description: "Campanhas de busca e display" },
-        { name: "Facebook Ads", level: 88, description: "Social media advertising" },
-        { name: "Landing Pages", level: 90, description: "Páginas de conversão" },
-        { name: "UTM Tracking", level: 92, description: "Rastreamento de campanhas" },
-        { name: "A/B Testing", level: 85, description: "Testes e otimização" },
-        { name: "Email Marketing", level: 87, description: "Automação de email" },
-        { name: "Copywriting", level: 80, description: "Textos persuasivos" },
-        { name: "Pixel Tracking", level: 88, description: "Rastreamento de conversões" }
+        { name: "UTM Tracking", level: "Operacional", description: "Rastreamento de campanhas" },
+        { name: "Landing Pages", level: "Operacional", description: "Páginas de conversão" },
+        { name: "Google Ads", level: "Operacional", description: "Campanhas de busca e display" },
+        { name: "Facebook Ads", level: "Operacional", description: "Social media advertising" },
+        { name: "Email Marketing", level: "Operacional", description: "Automação de email" },
+        { name: "A/B Testing", level: "Operacional", description: "Testes e otimização" },
+        { name: "Pixel Tracking", level: "Operacional", description: "Rastreamento de conversões" },
+        { name: "Copywriting", level: "Operacional", description: "Textos persuasivos" }
       ]
     }
   ];
@@ -86,8 +86,8 @@ const Skills = () => {
             </span>
           </h2>
           <p className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
-            Ferramentas e tecnologias organizadas por área de atuação, 
-            com <strong className="text-blue-400">automação</strong> como especialidade principal.
+            Venho do marketing e tráfego (5 anos), então sei conversar com a área e integrar leads à operação. 
+            Hoje meu foco é montar a <strong className="text-blue-400">máquina</strong>, não só a campanha.
           </p>
         </motion.div>
 
@@ -157,24 +157,17 @@ const Skills = () => {
                       {skill.description}
                     </p>
 
-                    {/* Skill Level Bar */}
-                    <div className="space-y-2">
-                      <div className="flex justify-between items-center">
-                        <span className="text-slate-300 text-xs font-medium">Proficiência</span>
-                        <span className="text-slate-300 text-xs font-medium">{skill.level}%</span>
-                      </div>
-                      <div className="w-full bg-slate-700/50 rounded-full h-2 overflow-hidden">
-                        <motion.div
-                          initial={{ width: 0 }}
-                          whileInView={{ width: `${skill.level}%` }}
-                          transition={{ duration: 1, delay: categoryIndex * 0.2 + skillIndex * 0.05 + 0.3 }}
-                          viewport={{ once: true }}
-                          className={`
-                            h-full rounded-full bg-gradient-to-r ${category.gradient}
-                            shadow-lg
-                          `}
-                        />
-                      </div>
+                    {/* Skill Level Badge */}
+                    <div className="flex justify-between items-center">
+                      <span className="text-slate-300 text-xs font-medium">Nível</span>
+                      <span className={`
+                        text-xs font-medium px-2 py-1 rounded-full
+                        ${skill.level === 'Domínio' ? 'bg-blue-500/20 text-blue-300 border border-blue-400/30' :
+                          skill.level === 'Avançado' ? 'bg-purple-500/20 text-purple-300 border border-purple-400/30' :
+                          'bg-slate-500/20 text-slate-300 border border-slate-400/30'}
+                      `}>
+                        {skill.level}
+                      </span>
                     </div>
 
                     {/* Hover Effect */}
@@ -189,37 +182,7 @@ const Skills = () => {
           ))}
         </div>
 
-        {/* Bottom Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          viewport={{ once: true }}
-          className="text-center mt-16"
-        >
-          <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-400/30 rounded-3xl p-8 max-w-3xl mx-auto backdrop-blur-sm">
-            <h3 className="text-2xl font-bold text-white mb-4">
-              Stack Integrado para Resultados Máximos
-            </h3>
-            <p className="text-slate-300 mb-6 leading-relaxed">
-              Cada ferramenta é escolhida estrategicamente para se integrar perfeitamente com as outras, 
-              criando um ecossistema tecnológico coeso e eficiente.
-            </p>
-            <div className="flex flex-wrap justify-center gap-3 mb-6">
-              {["Integração Total", "Automação Inteligente", "Dados Centralizados", "Escalabilidade"].map((feature, index) => (
-                <span
-                  key={feature}
-                  className="px-4 py-2 bg-blue-500/20 border border-blue-400/40 text-blue-300 rounded-full text-sm font-medium"
-                >
-                  {feature}
-                </span>
-              ))}
-            </div>
-            <button className="group px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-2xl transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25">
-              <span className="relative z-10">Vamos Discutir Sua Stack Ideal</span>
-            </button>
-          </div>
-        </motion.div>
+
       </div>
     </section>
   );

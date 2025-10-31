@@ -6,63 +6,33 @@ const Showcase = () => {
   const projects = [
     {
       id: 1,
-      title: "Automação de Lead Scoring",
+      title: "Automação de entrada de leads → CRM → WhatsApp",
       category: "Automação",
-      description: "Sistema automatizado que qualifica leads em tempo real baseado em comportamento, dados demográficos e interações, integrando CRM com ferramentas de marketing.",
-      technologies: ["n8n", "HubSpot", "APIs", "Webhooks"],
-      results: [
-        "85% redução no tempo de qualificação",
-        "40% aumento na taxa de conversão",
-        "Eliminação de trabalho manual"
-      ],
+      description: "Fluxo que captura leads de formulários, qualifica automaticamente no CRM e dispara mensagens personalizadas no WhatsApp.",
+      technologies: ["n8n", "HubSpot", "WhatsApp API"],
       icon: "⚡",
       gradient: "from-blue-600 to-cyan-600",
       bgGradient: "from-blue-500/10 to-cyan-500/10"
     },
     {
       id: 2,
-      title: "Dashboard Executivo de Vendas",
+      title: "Padronização de funil e campos para reporting",
       category: "CRM & BI",
-      description: "Painel centralizado conectando múltiplas fontes de dados para visão 360° do funil de vendas, com métricas em tempo real e alertas automáticos.",
-      technologies: ["Power BI", "SQL", "HubSpot", "Google Analytics"],
-      results: [
-        "Visibilidade completa do funil",
-        "Decisões baseadas em dados",
-        "Identificação rápida de gargalos"
-      ],
+      description: "Organização da base de dados, criação de campos padronizados e dashboards para acompanhamento de métricas de vendas.",
+      technologies: ["HubSpot", "Looker Studio", "SQL"],
       icon: "📊",
       gradient: "from-emerald-600 to-teal-600",
       bgGradient: "from-emerald-500/10 to-teal-500/10"
     },
     {
       id: 3,
-      title: "Funil de Aquisição Integrado",
-      category: "Marketing",
-      description: "Campanha completa desde anúncios até conversão, com tracking avançado e integração automática com CRM para nutrição de leads.",
-      technologies: ["Google Ads", "Facebook Ads", "Landing Pages", "UTMs"],
-      results: [
-        "60% redução no CAC",
-        "3x aumento no LTV",
-        "Rastreamento completo da jornada"
-      ],
+      title: "Integração tráfego/ads → CRM para provar campanha",
+      category: "Marketing + CRM",
+      description: "Conexão entre campanhas de tráfego e CRM para rastreamento completo do ROI e atribuição de conversões.",
+      technologies: ["Google Ads", "Facebook Ads", "HubSpot", "UTMs"],
       icon: "🎯",
-      gradient: "from-orange-600 to-pink-600",
-      bgGradient: "from-orange-500/10 to-pink-500/10"
-    },
-    {
-      id: 4,
-      title: "Orquestração Multi-Canal",
-      category: "Integração Completa",
-      description: "Solução que conecta aquisição, CRM, automação e BI em um fluxo único, eliminando silos e maximizando a eficiência operacional.",
-      technologies: ["n8n", "Make", "HubSpot", "Power BI", "APIs"],
-      results: [
-        "Integração de 8 sistemas",
-        "90% automação de processos",
-        "ROI 300% em 6 meses"
-      ],
-      icon: "🔗",
-      gradient: "from-purple-600 to-indigo-600",
-      bgGradient: "from-purple-500/10 to-indigo-500/10"
+      gradient: "from-green-600 to-emerald-600",
+      bgGradient: "from-green-500/10 to-emerald-500/10"
     }
   ];
 
@@ -171,20 +141,7 @@ const Showcase = () => {
                   </div>
                 </div>
 
-                {/* Results */}
-                <div>
-                  <h4 className="text-white font-semibold text-sm uppercase tracking-wider mb-3">
-                    Resultados Alcançados
-                  </h4>
-                  <ul className="space-y-2">
-                    {project.results.map((result, resultIndex) => (
-                      <li key={resultIndex} className="flex items-center gap-3 text-slate-300">
-                        <div className="w-2 h-2 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full"></div>
-                        {result}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+
 
                 {/* Hover Effect */}
                 <div className={`
@@ -231,32 +188,7 @@ const Showcase = () => {
           </div>
         </motion.div>
 
-        {/* CTA Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
-          viewport={{ once: true }}
-          className="text-center"
-        >
-          <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-400/30 rounded-3xl p-8 max-w-3xl mx-auto backdrop-blur-sm">
-            <h3 className="text-2xl font-bold text-white mb-4">
-              Pronto para Resultados Similares?
-            </h3>
-            <p className="text-slate-300 mb-6 leading-relaxed">
-              Cada projeto é único, mas a metodologia é comprovada. 
-              Vamos conversar sobre como posso adaptar essas soluções para seu negócio.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="group px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-2xl transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25">
-                <span className="relative z-10">Quero Discutir Meu Projeto</span>
-              </button>
-              <button className="group px-8 py-4 border border-white/20 text-white font-semibold rounded-2xl backdrop-blur-sm transition-all duration-300 hover:border-white/40 hover:bg-white/5 hover:scale-105">
-                Ver Mais Casos
-              </button>
-            </div>
-          </div>
-        </motion.div>
+
       </div>
     </section>
   );

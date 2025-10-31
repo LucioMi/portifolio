@@ -12,18 +12,18 @@ const About = () => {
       color: "from-orange-500 to-pink-500"
     },
     {
-      period: "Evolução",
-      title: "CRM & Análise",
-      description: "Mergulhei em dados, funis e otimização de processos de vendas",
-      icon: "📊",
-      color: "from-emerald-500 to-teal-500"
-    },
-    {
       period: "Especialização",
       title: "Automação & Integração",
       description: "Descobri minha paixão por conectar sistemas e automatizar processos",
       icon: "⚡",
       color: "from-blue-500 to-cyan-500"
+    },
+    {
+      period: "Evolução",
+      title: "CRM & Análise",
+      description: "Mergulhei em dados, funis e otimização de processos de vendas",
+      icon: "📊",
+      color: "from-emerald-500 to-teal-500"
     }
   ];
 
@@ -70,8 +70,7 @@ const About = () => {
             </span>
           </h2>
           <p className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
-            Minha jornada me levou de marketing para automação, 
-            criando uma perspectiva única que integra estratégia e tecnologia.
+            Sou gestor de automações e dev low-code, especialista em conectar ferramentas, dados e times usando n8n, Make, APIs, bancos e CRM. Atuo também como analista de CRM/BI (organização da base, funis, segmentação, dashboards) e tenho 5 anos de experiência com marketing e tráfego, o que me ajuda a fechar o ciclo entre aquisição e atendimento. Hoje meu foco principal é automação.
           </p>
         </motion.div>
 
@@ -88,21 +87,20 @@ const About = () => {
             <div className="space-y-6">
               <div className="space-y-4">
                 <h3 className="text-3xl font-bold text-white">
-                  Gestor de Automações com{' '}
+                  Especialista em{' '}
                   <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                    DNA de Marketing
+                    Automação & Integração
                   </span>
                 </h3>
                 <p className="text-slate-300 leading-relaxed text-lg">
-                  Hoje atuo principalmente como <strong className="text-blue-400">gestor de automações</strong>, 
-                  desenvolvendo soluções low-code que conectam sistemas e otimizam processos. 
-                  Mas também posso atuar como <strong className="text-emerald-400">analista de CRM</strong>, 
-                  modelando funis e criando dashboards estratégicos.
+                  Atuo principalmente como <strong className="text-blue-400">gestor de automações e dev low-code</strong>, 
+                  especialista em conectar ferramentas, dados e times usando n8n, Make, APIs, bancos e CRM. 
+                  Também trabalho como <strong className="text-emerald-400">analista de CRM/BI</strong>, 
+                  organizando bases, funis, segmentação e dashboards.
                 </p>
                 <p className="text-slate-300 leading-relaxed text-lg">
-                  Meu background em <strong className="text-orange-400">marketing digital</strong> é o diferencial: 
-                  entendo profundamente a jornada do cliente e sei como integrar aquisição de leads 
-                  com CRM e automação para criar ciclos completos de conversão.
+                  Venho do <strong className="text-orange-400">marketing e tráfego (5 anos)</strong>, então sei conversar com a área e integrar leads à operação. 
+                  Hoje meu foco é montar a máquina, não só a campanha. Isso me ajuda a fechar o ciclo entre aquisição e atendimento.
                 </p>
               </div>
 
@@ -247,28 +245,7 @@ const About = () => {
             </div>
           </motion.div>
 
-          {/* CTA */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1 }}
-            viewport={{ once: true }}
-            className="text-center"
-          >
-            <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-400/30 rounded-3xl p-8 max-w-3xl mx-auto backdrop-blur-sm">
-              <h3 className="text-2xl font-bold text-white mb-4">
-                Vamos Trabalhar Juntos?
-              </h3>
-              <p className="text-slate-300 mb-6 leading-relaxed">
-                Se você busca alguém que entende tanto de tecnologia quanto de negócio, 
-                que pode atuar como gestor de automações ou analista de CRM, 
-                vamos conversar sobre como posso ajudar seu projeto.
-              </p>
-              <button className="group px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-2xl transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25">
-                <span className="relative z-10">Iniciar Conversa</span>
-              </button>
-            </div>
-          </motion.div>
+
         </div>
       </div>
     </section>

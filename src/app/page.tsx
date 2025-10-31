@@ -1,4 +1,5 @@
 import Hero from '@/components/Hero';
+import Roles from '@/components/Roles';
 import Features from '@/components/Features';
 import WhyTogether from '@/components/WhyTogether';
 import Skills from '@/components/Skills';
@@ -10,6 +11,7 @@ export default function Home() {
   return (
     <main className="min-h-screen">
       <Hero />
+      <Roles />
       <Features />
       <WhyTogether />
       <Skills />

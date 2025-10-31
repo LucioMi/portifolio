@@ -197,25 +197,7 @@ const WhyTogether = () => {
           </motion.div>
 
           {/* CTA */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mt-16"
-          >
-            <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-400/30 rounded-3xl p-8 max-w-2xl mx-auto backdrop-blur-sm">
-              <h3 className="text-2xl font-bold text-white mb-4">
-                Pronto para um ciclo completo e integrado?
-              </h3>
-              <p className="text-slate-300 mb-6 leading-relaxed">
-                Vamos conversar sobre como posso otimizar seu processo de aquisição e conversão de leads.
-              </p>
-              <button className="group px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-2xl transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25">
-                <span className="relative z-10">Quero Otimizar Meu Processo</span>
-              </button>
-            </div>
-          </motion.div>
+
         </div>
       </div>
     </section>
