@@ -9,15 +9,25 @@ import Contact from '@/components/Contact';
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
-      <Hero />
+    <main className="min-h-screen pt-16">
+      <section id="home">
+        <Hero />
+      </section>
       <Roles />
       <Features />
       <WhyTogether />
-      <Skills />
-      <Showcase />
-      <About />
-      <Contact />
+      <section id="about">
+        <About />
+      </section>
+      <section id="skills">
+        <Skills />
+      </section>
+      <section id="showcase">
+        <Showcase />
+      </section>
+      <section id="contact">
+        <Contact />
+      </section>
     </main>
   );
 }

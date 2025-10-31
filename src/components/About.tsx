@@ -72,7 +72,7 @@ const About = () => {
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-              Sobre mim
+              Sobre
             </span>
           </h2>
           <p className="text-xl text-slate-300 max-w-4xl mx-auto leading-relaxed">
