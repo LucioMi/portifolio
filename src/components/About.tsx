@@ -76,7 +76,7 @@ const About = () => {
             </span>
           </h2>
           <p className="text-xl text-slate-300 max-w-4xl mx-auto leading-relaxed">
-            Gestor de automações (N8N / Make), Analista de CRM & BI e estrategista de marketing com 5 anos de experiência.
+            Gestor de automações, Analista de CRM & BI e estrategista de marketing.
           </p>
         </motion.div>
 
