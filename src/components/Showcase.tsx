@@ -36,28 +36,7 @@ const Showcase = () => {
     }
   ];
 
-  const deliveryTypes = [
-    {
-      title: "Automações Personalizadas",
-      description: "Fluxos sob medida para suas necessidades específicas",
-      icon: "⚙️"
-    },
-    {
-      title: "Integrações Complexas",
-      description: "Conectando sistemas que não conversam nativamente",
-      icon: "🔌"
-    },
-    {
-      title: "Dashboards Estratégicos",
-      description: "Visualizações que transformam dados em insights",
-      icon: "📈"
-    },
-    {
-      title: "Otimização de Funis",
-      description: "Melhorias contínuas baseadas em dados reais",
-      icon: "🎯"
-    }
-  ];
+
 
   return (
     <section className="py-24 bg-gradient-to-br from-slate-800 via-slate-900 to-slate-800 relative overflow-hidden">
@@ -153,40 +132,7 @@ const Showcase = () => {
           ))}
         </div>
 
-        {/* Delivery Types */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          viewport={{ once: true }}
-          className="mb-16"
-        >
-          <h3 className="text-3xl font-bold text-white text-center mb-12">
-            Tipos de{' '}
-            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-              Projetos
-            </span>
-          </h3>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-            {deliveryTypes.map((type, index) => (
-              <motion.div
-                key={type.title}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: 0.6 + index * 0.1 }}
-                viewport={{ once: true }}
-                className="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm hover:bg-white/10 transition-all duration-300 text-center group"
-              >
-                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">
-                  {type.icon}
-                </div>
-                <h4 className="text-white font-bold text-lg mb-3">{type.title}</h4>
-                <p className="text-slate-400 leading-relaxed text-sm">{type.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
+
 
 
       </div>

@@ -25,6 +25,19 @@ const About = () => {
     }
   ];
 
+  const experience = [
+    {
+      title: "Gestor de Automações",
+      period: "06/2024 - Atual",
+      icon: "⚡"
+    },
+    {
+      title: "Gestor de Tráfego/Estrategista de Marketing",
+      period: "01/2022 - 06/2024",
+      icon: "🎯"
+    }
+  ];
+
   const skills = [
     "N8N",
     "Make",
@@ -76,14 +89,14 @@ const About = () => {
             viewport={{ once: true }}
           >
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-6">
-               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
+               <div className="grid grid-cols-1 md:grid-cols-4 gap-6 items-start">
                  {/* Foto - Menor */}
                  <div className="text-center">
                    <div className="relative w-40 h-40 mx-auto mb-4">
                      <div className="absolute inset-0 bg-gradient-to-br from-blue-400/20 to-purple-400/20 rounded-2xl blur-lg"></div>
                      <div className="relative w-full h-full bg-white/10 rounded-2xl border border-white/20 overflow-hidden">
                        <Image
-                         src="/lucio.svg"
+                         src="/lucio.png"
                          alt="Lucio Henrique"
                          fill
                          className="object-cover"
@@ -119,6 +132,35 @@ const About = () => {
                              <h4 className="text-white font-medium text-xs leading-tight">{edu.title}</h4>
                              <p className="text-slate-400 text-xs">{edu.institution}</p>
                              <span className="text-blue-400 text-xs font-medium">{edu.year}</span>
+                           </div>
+                         </div>
+                       </motion.div>
+                     ))}
+                   </div>
+                 </div>
+
+                 {/* Experiência - Compacta */}
+                 <div>
+                   <h3 className="text-lg font-bold text-white mb-3 flex items-center gap-2">
+                     <span className="text-lg">💼</span>
+                     Experiência
+                   </h3>
+                   
+                   <div className="space-y-2">
+                     {experience.map((exp, index) => (
+                       <motion.div
+                         key={index}
+                         initial={{ opacity: 0, y: 10 }}
+                         whileInView={{ opacity: 1, y: 0 }}
+                         transition={{ duration: 0.4, delay: 0.1 * index }}
+                         viewport={{ once: true }}
+                         className="bg-white/5 rounded-lg p-2 border border-white/5"
+                       >
+                         <div className="flex items-start gap-2">
+                           <span className="text-sm">{exp.icon}</span>
+                           <div className="flex-1">
+                             <h4 className="text-white font-medium text-xs leading-tight">{exp.title}</h4>
+                             <span className="text-blue-400 text-xs font-medium">{exp.period}</span>
                            </div>
                          </div>
                        </motion.div>

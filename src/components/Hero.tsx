@@ -40,28 +40,7 @@ export default function Hero() {
             Foco principal em automações e low-code (n8n, Make, APIs). Também atuo como analista de CRM/BI e tenho 5 anos de experiência com marketing e tráfego para integrar aquisição ao CRM.
           </motion.p>
 
-          {/* Como posso atuar */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6, duration: 0.8 }}
-            className="space-y-3"
-          >
-            <p className="text-sm font-medium text-slate-400 uppercase tracking-wide">
-              Como posso atuar:
-            </p>
-            <div className="flex flex-wrap justify-center gap-3 max-w-2xl mx-auto">
-              <span className="px-4 py-2 bg-blue-500/20 text-blue-300 rounded-full text-sm font-medium border border-blue-400/30 backdrop-blur-sm">
-                🔧 Gestor de automações / Low-code
-              </span>
-              <span className="px-4 py-2 bg-purple-500/20 text-purple-300 rounded-full text-sm font-medium border border-purple-400/30 backdrop-blur-sm">
-                📊 Analista de CRM & BI
-              </span>
-              <span className="px-4 py-2 bg-green-500/20 text-green-300 rounded-full text-sm font-medium border border-green-400/30 backdrop-blur-sm">
-                🎯 Estratégia de marketing
-              </span>
-            </div>
-          </motion.div>
+
         </motion.div>
       </div>
     </section>
