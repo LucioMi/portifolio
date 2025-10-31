@@ -9,7 +9,7 @@ const Contact = () => {
       description: "Resposta rápida e direta",
       icon: "💬",
       action: "Chamar no WhatsApp",
-      href: "https://wa.me/5511999999999?text=Olá! Vi seu portfólio e gostaria de conversar sobre automações e CRM.",
+      href: "https://wa.me/5531999692838?text=Olá! Vi seu portfólio e gostaria de conversar sobre automações e CRM.",
       isPrimary: true,
       gradient: "from-green-600 to-emerald-600",
       bgGradient: "from-green-500/10 to-emerald-500/10"
@@ -19,7 +19,7 @@ const Contact = () => {
       description: "Para propostas detalhadas",
       icon: "📧",
       action: "Enviar Email",
-      href: "mailto:contato@exemplo.com?subject=Interesse em Automações e CRM",
+      href: "mailto:luciohenrick@gmail.com?subject=Interesse em Automações e CRM",
       isPrimary: false,
       gradient: "from-blue-600 to-purple-600",
       bgGradient: "from-blue-500/10 to-purple-500/10"
@@ -29,7 +29,7 @@ const Contact = () => {
       description: "Vamos nos conectar",
       icon: "💼",
       action: "Conectar no LinkedIn",
-      href: "https://linkedin.com/in/seu-perfil",
+      href: "https://www.linkedin.com/in/lucio-henrique-225334138/",
       isPrimary: false,
       gradient: "from-blue-700 to-blue-600",
       bgGradient: "from-blue-600/10 to-blue-500/10"
@@ -92,11 +92,11 @@ const Contact = () => {
                   className="block h-full"
                 >
                   <div className={`
-                    h-full p-8 rounded-3xl backdrop-blur-sm border transition-all duration-500
+                    h-full p-8 rounded-3xl backdrop-blur-sm border transition-all duration-300 ease-out
                     bg-gradient-to-br ${method.bgGradient}
-                    ${method.isPrimary ? 'border-green-400/30 hover:border-green-400/60' : 'border-white/10 hover:border-white/20'}
-                    hover:scale-105 hover:shadow-2xl hover:shadow-white/10
-                    ${method.isPrimary ? 'ring-2 ring-green-400/20' : ''}
+                    ${method.isPrimary ? 'border-green-400/30 hover:border-green-400/50' : 'border-white/10 hover:border-white/30'}
+                    hover:scale-[1.02] hover:shadow-xl hover:-translate-y-1
+                    ${method.isPrimary ? 'ring-1 ring-green-400/20 hover:ring-green-400/40' : 'hover:ring-1 hover:ring-white/20'}
                   `}>
                     {/* Priority Badge */}
                     {method.isPrimary && (
@@ -126,22 +126,18 @@ const Contact = () => {
                     {/* CTA Button */}
                     <div className="text-center">
                       <span className={`
-                        inline-block px-6 py-3 rounded-2xl font-semibold transition-all duration-300
+                        inline-block px-6 py-3 rounded-2xl font-semibold transition-all duration-200 ease-out
                         ${method.isPrimary 
-                          ? 'bg-gradient-to-r from-green-600 to-emerald-600 text-white shadow-lg hover:shadow-green-500/25' 
-                          : 'bg-white/10 text-white border border-white/20 hover:bg-white/20'
+                          ? 'bg-gradient-to-r from-green-600 to-emerald-600 text-white shadow-lg hover:shadow-green-500/30 hover:from-green-500 hover:to-emerald-500' 
+                          : 'bg-white/10 text-white border border-white/20 hover:bg-white/20 hover:border-white/40'
                         }
-                        group-hover:scale-105
+                        group-hover:scale-[1.03] group-hover:shadow-lg
                       `}>
                         {method.action}
                       </span>
                     </div>
 
-                    {/* Hover Effect */}
-                    <div className={`
-                      absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500
-                      bg-gradient-to-br ${method.gradient} opacity-5
-                    `}></div>
+
                   </div>
                 </a>
               </motion.div>
