@@ -3,57 +3,50 @@
 import { motion } from 'framer-motion';
 
 const About = () => {
-  const journey = [
+  const education = [
     {
-      period: "Início",
-      title: "Marketing Digital",
-      description: "Comecei criando campanhas e entendendo a jornada do cliente",
-      icon: "🎯",
-      color: "from-orange-500 to-pink-500"
+      title: "Técnico em Eletromecânica",
+      institution: "SENAI",
+      year: "2014",
+      icon: "⚙️"
     },
     {
-      period: "Especialização",
-      title: "Automação & Integração",
-      description: "Descobri minha paixão por conectar sistemas e automatizar processos",
-      icon: "⚡",
-      color: "from-blue-500 to-cyan-500"
+      title: "Engenharia de Controle e Automação",
+      institution: "Una",
+      year: "2020",
+      icon: "🎓"
     },
     {
-      period: "Evolução",
-      title: "CRM & Análise",
-      description: "Mergulhei em dados, funis e otimização de processos de vendas",
-      icon: "📊",
-      color: "from-emerald-500 to-teal-500"
+      title: "Pós-graduação em Engenharia de Software",
+      institution: "Anhanguera",
+      year: "2023",
+      icon: "💻"
     }
   ];
 
-  const differentials = [
-    {
-      title: "Visão de Negócio",
-      description: "Entendo o impacto de cada automação no resultado final",
-      icon: "💡"
-    },
-    {
-      title: "Experiência Prática",
-      description: "Já estive do outro lado, sei as dores reais dos times",
-      icon: "🎯"
-    },
-    {
-      title: "Integração Natural",
-      description: "Conecto tecnologia com estratégia de forma orgânica",
-      icon: "🔗"
-    },
-    {
-      title: "Resultados Mensuráveis",
-      description: "Cada projeto tem métricas claras de sucesso",
-      icon: "📈"
-    }
+  const skills = [
+    "Automações e LLMs com N8N",
+    "Make, Docker",
+    "APIs REST e integrações entre sistemas",
+    "Bancos de dados (Postgres/SQL)",
+    "LangChain (fluxo de IA orquestrado)",
+    "RAG & vetores",
+    "CRM & BI (modelagem, dashboards)",
+    "Python e JavaScript"
+  ];
+
+  const personality = [
+    { label: "MBTI", value: "INTJ-T" },
+    { label: "DISC", value: "DC" },
+    { label: "Eneagrama", value: "5 asa 4" },
+    { label: "Big Five", value: "Abertura 42, Conscienciosidade 68, Extroversão 49, Amabilidade 34, Neuroticism 71" }
   ];
 
   return (
-    <section className="py-24 bg-slate-900 relative overflow-hidden">
+    <section className="py-24 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
       {/* Background Effects */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-slate-800/50 via-transparent to-transparent"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-900/20 via-transparent to-transparent"></div>
+      <div className="absolute inset-0 bg-grid-white/[0.02] bg-[size:50px_50px]"></div>
       
       <div className="container mx-auto px-6 relative z-10">
         <motion.div
@@ -69,184 +62,158 @@ const About = () => {
               Mim
             </span>
           </h2>
-          <p className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
-            Sou gestor de automações e dev low-code, especialista em conectar ferramentas, dados e times usando n8n, Make, APIs, bancos e CRM. Atuo também como analista de CRM/BI (organização da base, funis, segmentação, dashboards) e tenho 5 anos de experiência com marketing e tráfego, o que me ajuda a fechar o ciclo entre aquisição e atendimento. Hoje meu foco principal é automação.
-          </p>
         </motion.div>
 
-        <div className="max-w-6xl mx-auto">
-          {/* Main About Content */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="grid lg:grid-cols-2 gap-12 items-center mb-20"
-          >
-            {/* Text Content */}
-            <div className="space-y-6">
-              <div className="space-y-4">
-                <h3 className="text-3xl font-bold text-white">
-                  Especialista em{' '}
-                  <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                    Automação & Integração
-                  </span>
+        <div className="max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
+            {/* História Principal */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="space-y-6"
+            >
+              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-8">
+                <h3 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+                  <span className="text-3xl">👨‍💻</span>
+                  Minha Trajetória
                 </h3>
-                <p className="text-slate-300 leading-relaxed text-lg">
-                  Atuo principalmente como <strong className="text-blue-400">gestor de automações e dev low-code</strong>, 
-                  especialista em conectar ferramentas, dados e times usando n8n, Make, APIs, bancos e CRM. 
-                  Também trabalho como <strong className="text-emerald-400">analista de CRM/BI</strong>, 
-                  organizando bases, funis, segmentação e dashboards.
-                </p>
-                <p className="text-slate-300 leading-relaxed text-lg">
-                  Venho do <strong className="text-orange-400">marketing e tráfego (5 anos)</strong>, então sei conversar com a área e integrar leads à operação. 
-                  Hoje meu foco é montar a máquina, não só a campanha. Isso me ajuda a fechar o ciclo entre aquisição e atendimento.
-                </p>
-              </div>
-
-              {/* Key Points */}
-              <div className="space-y-3">
-                <div className="flex items-center gap-3">
-                  <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
-                  <span className="text-slate-300">
-                    <strong className="text-blue-400">Foco principal:</strong> Automações e integrações complexas
-                  </span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-2 h-2 bg-emerald-400 rounded-full"></div>
-                  <span className="text-slate-300">
-                    <strong className="text-emerald-400">Competência secundária:</strong> Análise de CRM e BI
-                  </span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-2 h-2 bg-orange-400 rounded-full"></div>
-                  <span className="text-slate-300">
-                    <strong className="text-orange-400">Diferencial:</strong> Visão estratégica de marketing
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            {/* Visual Element */}
-            <div className="relative">
-              <div className="bg-gradient-to-br from-blue-500/10 to-purple-500/10 border border-blue-400/30 rounded-3xl p-8 backdrop-blur-sm">
-                <div className="text-center space-y-6">
-                  <div className="w-24 h-24 mx-auto bg-gradient-to-br from-blue-600 to-purple-600 rounded-full flex items-center justify-center text-4xl shadow-lg">
-                    ⚡
-                  </div>
-                  <div>
-                    <h4 className="text-2xl font-bold text-white mb-2">Automação + Estratégia</h4>
-                    <p className="text-slate-300 leading-relaxed">
-                      A combinação perfeita entre conhecimento técnico e visão de negócio
-                    </p>
-                  </div>
-                  <div className="grid grid-cols-3 gap-4 text-center">
-                    <div>
-                      <div className="text-2xl mb-2">🔧</div>
-                      <div className="text-white font-semibold text-sm">Técnico</div>
-                    </div>
-                    <div>
-                      <div className="text-2xl mb-2">📊</div>
-                      <div className="text-white font-semibold text-sm">Analítico</div>
-                    </div>
-                    <div>
-                      <div className="text-2xl mb-2">🎯</div>
-                      <div className="text-white font-semibold text-sm">Estratégico</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-
-          {/* Journey Timeline */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            viewport={{ once: true }}
-            className="mb-20"
-          >
-            <h3 className="text-3xl font-bold text-white text-center mb-12">
-              Minha{' '}
-              <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                Jornada
-              </span>
-            </h3>
-            
-            <div className="grid md:grid-cols-3 gap-8">
-              {journey.map((step, index) => (
-                <motion.div
-                  key={step.period}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="text-center relative"
-                >
-                  {/* Connection Line */}
-                  {index < journey.length - 1 && (
-                    <div className="hidden md:block absolute top-12 left-full w-full h-0.5 bg-gradient-to-r from-blue-400/50 to-purple-400/50 transform translate-x-4"></div>
-                  )}
+                
+                <div className="space-y-4 text-slate-300 leading-relaxed">
+                  <p>
+                    Minha base vem da <strong className="text-blue-400">engenharia</strong> - formado em Controle e Automação pela Una (2020), com técnico em Eletromecânica pelo SENAI (2014) e pós-graduação em Engenharia de Software (Anhanguera, 2023). Essa formação me deu pensamento estruturado, entendimento de processos e base técnica sólida. Durante a pós, estagiei como desenvolvedor, então <strong className="text-blue-400">não comecei do zero - já tinha código antes de ir pro low-code</strong>. De janeiro/2022 a junho/2024, atuei como <strong className="text-orange-400">gestor de tráfego e estrategista de marketing</strong> (Meta Ads, Google Ads, GA4, GTM). A partir de 06/2024, migrei para o mercado de <strong className="text-purple-400">desenvolvimento, automações e IA</strong>, focando em <strong className="text-cyan-400">N8N</strong>, Make, APIs REST, bancos de dados e integração com CRM, evoluindo depois para <strong className="text-emerald-400">CRM com foco em BI</strong>.
+                  </p>
                   
-                  {/* Step Content */}
-                  <div className="relative z-10">
-                    <div className={`
-                      w-24 h-24 mx-auto rounded-full flex items-center justify-center text-4xl mb-4
-                      bg-gradient-to-br ${step.color} shadow-lg
-                    `}>
-                      {step.icon}
+                  <p className="text-lg font-medium text-white">
+                    Hoje meu foco principal é <strong className="text-cyan-400">Gestão de Automações / Dev low-code</strong>, depois <strong className="text-emerald-400">CRM & BI</strong>; marketing e tráfego ficam como competência de apoio, mas tenho ~5 anos de experiência.
+                  </p>
+                </div>
+              </div>
+
+              {/* Perfil Comportamental */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-8"
+              >
+                <h3 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+                  <span className="text-3xl">🧠</span>
+                  Perfil Comportamental
+                </h3>
+                
+                <div className="grid grid-cols-2 gap-4 mb-4">
+                  {personality.slice(0, 3).map((item, index) => (
+                    <div key={index} className="bg-white/5 rounded-xl p-3">
+                      <div className="text-sm text-slate-400">{item.label}</div>
+                      <div className="text-white font-semibold">{item.value}</div>
                     </div>
-                    <div className="bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur-sm">
-                      <span className="text-blue-400 font-semibold text-sm uppercase tracking-wider">
-                        {step.period}
-                      </span>
-                      <h4 className="text-white font-bold text-xl mt-2 mb-3">{step.title}</h4>
-                      <p className="text-slate-300 leading-relaxed">{step.description}</p>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
+                  ))}
+                </div>
+                
+                <div className="bg-white/5 rounded-xl p-3 mb-4">
+                  <div className="text-sm text-slate-400">Big Five</div>
+                  <div className="text-white font-semibold text-sm">{personality[3].value}</div>
+                </div>
+                
+                <p className="text-slate-300 text-sm leading-relaxed">
+                  Perfil analítico e orientado a solução, que gosta de estruturar processos e automatizar o que é repetitivo. Combino pensamento estratégico com execução técnica detalhada.
+                </p>
+              </motion.div>
+            </motion.div>
 
-          {/* Differentials */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            viewport={{ once: true }}
-            className="mb-16"
-          >
-            <h3 className="text-3xl font-bold text-white text-center mb-12">
-              Meus{' '}
-              <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                Diferenciais
-              </span>
-            </h3>
-            
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {differentials.map((differential, index) => (
-                <motion.div
-                  key={differential.title}
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5, delay: 0.8 + index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm hover:bg-white/10 transition-all duration-300 text-center group"
-                >
-                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">
-                    {differential.icon}
-                  </div>
-                  <h4 className="text-white font-bold text-lg mb-3">{differential.title}</h4>
-                  <p className="text-slate-400 leading-relaxed text-sm">{differential.description}</p>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
+            {/* Sidebar com Formação e Competências */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="space-y-8"
+            >
+              {/* Formação */}
+              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-8">
+                <h3 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+                  <span className="text-3xl">🎓</span>
+                  Formação
+                </h3>
+                
+                <div className="space-y-4">
+                  {education.map((edu, index) => (
+                    <motion.div
+                      key={index}
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.5, delay: 0.1 * index }}
+                      viewport={{ once: true }}
+                      className="bg-white/5 rounded-xl p-4 border border-white/5"
+                    >
+                      <div className="flex items-start gap-3">
+                        <span className="text-2xl">{edu.icon}</span>
+                        <div className="flex-1">
+                          <h4 className="text-white font-semibold text-sm">{edu.title}</h4>
+                          <p className="text-slate-400 text-sm">{edu.institution}</p>
+                          <span className="text-blue-400 text-xs font-medium">{edu.year}</span>
+                        </div>
+                      </div>
+                    </motion.div>
+                  ))}
+                </div>
+              </div>
 
-
+              {/* Competências Principais */}
+              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-8">
+                <h3 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+                  <span className="text-3xl">⚡</span>
+                  Competências Principais
+                </h3>
+                
+                <div className="space-y-3">
+                  {skills.map((skill, index) => (
+                    <motion.div
+                      key={index}
+                      initial={{ opacity: 0, x: 20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.5, delay: 0.05 * index }}
+                      viewport={{ once: true }}
+                      className="flex items-center gap-3 bg-white/5 rounded-xl p-3 border border-white/5"
+                    >
+                      <div className="w-2 h-2 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full"></div>
+                      <span className="text-slate-300 text-sm">{skill}</span>
+                    </motion.div>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+          </div>
         </div>
+
+        {/* Floating Elements */}
+        <motion.div
+          animate={{ 
+            y: [0, -20, 0],
+            rotate: [0, 5, 0]
+          }}
+          transition={{ 
+            duration: 6,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+          className="absolute top-20 left-10 w-20 h-20 bg-blue-500/10 rounded-full blur-xl"
+        />
+        <motion.div
+          animate={{ 
+            y: [0, 20, 0],
+            rotate: [0, -5, 0]
+          }}
+          transition={{ 
+            duration: 8,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+          className="absolute bottom-20 right-10 w-32 h-32 bg-purple-500/10 rounded-full blur-xl"
+        />
       </div>
     </section>
   );
