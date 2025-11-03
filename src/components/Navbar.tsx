@@ -6,6 +6,7 @@ import { useState, useEffect } from 'react';
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
     { id: 'home', label: 'Início' },
@@ -102,11 +103,33 @@ const Navbar = () => {
             <motion.button
               whileTap={{ scale: 0.95 }}
               className="text-white p-2"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              aria-expanded={isMenuOpen}
+              aria-label={isMenuOpen ? 'Fechar menu' : 'Abrir menu'}
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
               </svg>
             </motion.button>
+          </div>
+        </div>
+
+        {/* Mobile Menu Panel */}
+        <div className={`md:hidden ${isMenuOpen ? 'block' : 'hidden'}`}>
+          <div className="mt-2 bg-slate-900/95 backdrop-blur-md border border-white/10 rounded-lg shadow-lg">
+            <div className="flex flex-col py-2">
+              {navItems.map((item) => (
+                <button
+                  key={item.id}
+                  onClick={() => { scrollToSection(item.id); setIsMenuOpen(false); }}
+                  className={`text-left px-4 py-3 text-sm font-medium transition-colors duration-200 ${
+                    activeSection === item.id ? 'text-blue-400' : 'text-slate-300 hover:text-white'
+                  }`}
+                >
+                  {item.label}
+                </button>
+              ))}
+            </div>
           </div>
         </div>
       </div>
