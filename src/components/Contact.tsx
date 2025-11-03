@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { RainbowButton } from '@/components/ui/rainbow-button';
 
 const Contact = () => {
   const contactMethods = [
@@ -11,8 +12,8 @@ const Contact = () => {
       action: "Chamar no WhatsApp",
       href: "https://wa.me/5531999692838?text=Olá! Vi seu portfólio e gostaria de conversar sobre automações e CRM.",
       isPrimary: true,
-      gradient: "from-green-600 to-emerald-600",
-      bgGradient: "from-green-500/10 to-emerald-500/10"
+      gradient: "from-[var(--blue-500)] to-[var(--violet-500)]",
+      bgGradient: "from-[var(--blue-500)]/10 to-[var(--violet-500)]/10"
     },
     {
       title: "Email",
@@ -21,8 +22,8 @@ const Contact = () => {
       action: "Enviar Email",
       href: "mailto:luciohenrick@gmail.com?subject=Interesse em Automações e CRM",
       isPrimary: false,
-      gradient: "from-blue-600 to-purple-600",
-      bgGradient: "from-blue-500/10 to-purple-500/10"
+      gradient: "from-[var(--blue-500)] to-[var(--violet-500)]",
+      bgGradient: "from-[var(--blue-500)]/10 to-[var(--violet-500)]/10"
     },
     {
       title: "LinkedIn",
@@ -31,8 +32,8 @@ const Contact = () => {
       action: "Conectar no LinkedIn",
       href: "https://www.linkedin.com/in/lucio-henrique-225334138/",
       isPrimary: false,
-      gradient: "from-blue-700 to-blue-600",
-      bgGradient: "from-blue-600/10 to-blue-500/10"
+      gradient: "from-[var(--blue-600)] to-[var(--violet-600)]",
+      bgGradient: "from-[var(--blue-600)]/10 to-[var(--violet-600)]/10"
     }
   ];
 
@@ -90,17 +91,26 @@ const Contact = () => {
                   rel="noopener noreferrer"
                   className="block h-full"
                 >
-                  <div className={`
-                    h-full p-8 rounded-3xl backdrop-blur-sm border transition-all duration-300 ease-out
-                    bg-gradient-to-br ${method.bgGradient}
-                    ${method.isPrimary ? 'border-green-400/30 hover:border-green-400/50' : 'border-white/10 hover:border-white/30'}
-                    hover:scale-[1.02] hover:shadow-xl hover:-translate-y-1
-                    ${method.isPrimary ? 'ring-1 ring-green-400/20 hover:ring-green-400/40' : 'hover:ring-1 hover:ring-white/20'}
-                  `}>
+                  <div
+                    className={`magic-card h-full p-8 rounded-3xl backdrop-blur-sm bg-gradient-to-br ${method.bgGradient}`}
+                    onMouseMove={(e) => {
+                      const target = e.currentTarget as HTMLElement;
+                      const rect = target.getBoundingClientRect();
+                      const x = e.clientX - rect.left;
+                      const y = e.clientY - rect.top;
+                      target.style.setProperty('--mouse-x', `${x}px`);
+                      target.style.setProperty('--mouse-y', `${y}px`);
+                    }}
+                    onMouseLeave={(e) => {
+                      const target = e.currentTarget as HTMLElement;
+                      target.style.removeProperty('--mouse-x');
+                      target.style.removeProperty('--mouse-y');
+                    }}
+                  >
                     {/* Priority Badge */}
-                    {method.isPrimary && (
+                    {method.isPrimary && method.title !== "WhatsApp" && (
                       <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                        <div className="bg-gradient-to-r from-green-600 to-emerald-600 text-white text-sm px-4 py-2 rounded-full font-semibold shadow-lg">
+                        <div className="bg-gradient-to-r from-[var(--blue-500)] to-[var(--violet-500)] text-white text-sm px-4 py-2 rounded-full font-semibold shadow-lg">
                           ⚡ Mais Rápido
                         </div>
                       </div>
@@ -112,28 +122,27 @@ const Contact = () => {
                     </div>
 
                     {/* Title */}
-                    <h3 className="text-2xl font-bold text-white mb-2 text-center">
+                    <h3 className="text-2xl font-bold text-[var(--text)] mb-2 text-center">
                       {method.title}
                     </h3>
                     <p className={`
-                      text-center mb-6 font-medium
-                      ${method.isPrimary ? 'text-green-300' : 'text-slate-400'}
+                      text-center mb-6 font-medium text-[var(--text-muted)]
                     `}>
                       {method.description}
                     </p>
 
                     {/* CTA Button */}
                     <div className="text-center">
-                      <span className={`
-                        inline-block px-6 py-3 rounded-2xl font-semibold transition-all duration-200 ease-out
-                        ${method.isPrimary 
-                          ? 'bg-gradient-to-r from-green-600 to-emerald-600 text-white shadow-lg hover:shadow-green-500/30 hover:from-green-500 hover:to-emerald-500' 
-                          : 'bg-white/10 text-white border border-white/20 hover:bg-white/20 hover:border-white/40'
-                        }
-                        group-hover:scale-[1.03] group-hover:shadow-lg
-                      `}>
+                      <RainbowButton 
+                        size="lg"
+                        variant={method.isPrimary ? "default" : "outline"}
+                        className={`${method.title === "WhatsApp" 
+                          ? "bg-none bg-green-600 hover:bg-green-500 text-white animate-none" 
+                          : "brand-rainbow"
+                        } group-hover:scale-[1.03] transition-transform duration-200`}
+                      >
                         {method.action}
-                      </span>
+                      </RainbowButton>
                     </div>
 
 

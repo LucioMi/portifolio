@@ -11,8 +11,8 @@ const Showcase = () => {
       description: "Fluxo que captura leads de formulários, qualifica automaticamente no CRM e dispara mensagens personalizadas no WhatsApp.",
       technologies: ["n8n", "HubSpot", "WhatsApp API"],
       icon: "⚡",
-      gradient: "from-blue-600 to-cyan-600",
-      bgGradient: "from-blue-500/10 to-cyan-500/10"
+      gradient: "from-[var(--blue-600)] to-[var(--violet-600)]",
+      bgGradient: "from-[var(--blue-600)/24] to-[var(--violet-600)/24]"
     },
     {
       id: 2,
@@ -21,8 +21,8 @@ const Showcase = () => {
       description: "Organização da base de dados, criação de campos padronizados e dashboards para acompanhamento de métricas de vendas.",
       technologies: ["HubSpot", "Looker Studio", "SQL"],
       icon: "📊",
-      gradient: "from-emerald-600 to-teal-600",
-      bgGradient: "from-emerald-500/10 to-teal-500/10"
+      gradient: "from-[var(--violet-500)] to-[var(--blue-500)]",
+      bgGradient: "from-[var(--violet-500)/22] to-[var(--blue-500)/22]"
     },
     {
       id: 3,
@@ -31,8 +31,8 @@ const Showcase = () => {
       description: "Conexão entre campanhas de tráfego e CRM para rastreamento completo do ROI e atribuição de conversões.",
       technologies: ["Google Ads", "Facebook Ads", "HubSpot", "UTMs"],
       icon: "🎯",
-      gradient: "from-green-600 to-emerald-600",
-      bgGradient: "from-green-500/10 to-emerald-500/10"
+      gradient: "from-[var(--blue-500)] to-[var(--violet-400)]",
+      bgGradient: "from-[var(--blue-700)/20] to-[var(--violet-700)/20]"
     }
   ];
 
@@ -72,13 +72,24 @@ const Showcase = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="group cursor-pointer"
+              className="relative group cursor-pointer"
             >
-              <div className={`
-                h-full p-8 rounded-3xl backdrop-blur-sm border border-white/10 transition-all duration-500
-                bg-gradient-to-br ${project.bgGradient}
-                hover:border-white/20 hover:scale-105 hover:shadow-2xl hover:shadow-white/10
-              `}>
+              <div
+                className={`magic-card h-full p-8 rounded-3xl backdrop-blur-sm bg-gradient-to-br ${project.bgGradient}`}
+                onMouseMove={(e) => {
+                  const target = e.currentTarget as HTMLElement;
+                  const rect = target.getBoundingClientRect();
+                  const x = e.clientX - rect.left;
+                  const y = e.clientY - rect.top;
+                  target.style.setProperty('--mouse-x', `${x}px`);
+                  target.style.setProperty('--mouse-y', `${y}px`);
+                }}
+                onMouseLeave={(e) => {
+                  const target = e.currentTarget as HTMLElement;
+                  target.style.removeProperty('--mouse-x');
+                  target.style.removeProperty('--mouse-y');
+                }}
+              >
                 {/* Project Header */}
                 <div className="flex items-start gap-4 mb-6">
                   <div className={`
@@ -121,11 +132,7 @@ const Showcase = () => {
 
 
 
-                {/* Hover Effect */}
-                <div className={`
-                  absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500
-                  bg-gradient-to-br ${project.gradient} opacity-5
-                `}></div>
+                
               </div>
             </motion.div>
           ))}
