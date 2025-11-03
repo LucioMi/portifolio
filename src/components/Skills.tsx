@@ -41,12 +41,14 @@ const Skills = () => {
       skills: [
         { name: "Funis de Vendas", level: "Avançado", description: "Modelagem e otimização" },
         { name: "Segmentação", level: "Avançado", description: "Qualificação de leads" },
-        { name: "HubSpot", level: "Avançado", description: "CRM completo e automações" },
         { name: "Dashboards Looker/BI", level: "Avançado", description: "Relatórios e visualizações" },
-        { name: "Lead Scoring", level: "Avançado", description: "Pontuação automática" },
-        { name: "Pipedrive", level: "Operacional", description: "Gestão de pipeline de vendas" },
         { name: "SQL", level: "Operacional", description: "Consultas e análise de dados" },
-        { name: "Google Analytics", level: "Operacional", description: "Análise de comportamento" }
+        { name: "Modelagem de Dados de CRM", level: "Avançado", description: "Estruturo contatos, empresas, negócios e atividades para análise confiável." },
+        { name: "Tracking & Atribuição de Origem", level: "Avançado", description: "UTM/Source/Medium/Campaign conectados ao negócio para provar resultado." },
+        { name: "ETL/ELT & Integrações", level: "Avançado", description: "Ingestão e sincronização de CRM/Ads para DW/lake com rotinas escaláveis." },
+        { name: "Métricas de Funil & SLA", level: "Avançado", description: "Conversões por estágio, aging de pipeline e tempo de resposta acionável." },
+        { name: "Segmentação & Audiences", level: "Avançado", description: "Regras dinâmicas por perfil/comportamento para nutrição, reativação e upsell." }
+        
       ]
     },
     {
