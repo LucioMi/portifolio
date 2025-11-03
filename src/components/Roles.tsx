@@ -25,9 +25,9 @@ export default function Roles() {
   ]
 
   return (
-    <section className="pt-8 pb-16 bg-slate-800 relative overflow-hidden">
+    <section className="pt-8 pb-16 bg-[var(--bg)] relative overflow-hidden">
       {/* Background Effects */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-slate-700/50 via-transparent to-transparent"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-900/10 via-transparent to-transparent"></div>
       
       <div className="max-w-6xl mx-auto px-4 relative z-10">
         <motion.div

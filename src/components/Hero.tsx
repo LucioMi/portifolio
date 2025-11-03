@@ -40,7 +40,7 @@ export default function Hero() {
   }, [prefersReduced, paused, titles.length])
 
   // Destaque sutil (usar no máximo 2–3 spans por título)
-  const highlight = 'bg-gradient-to-r from-indigo-400 via-sky-400 to-cyan-400 bg-clip-text text-transparent'
+  const highlight = 'bg-gradient-to-r from-[var(--blue-500)] via-[var(--blue-400)] to-[var(--violet-500)] bg-clip-text text-transparent'
 
   // Render do título com spans destacados
   const renderTitle = (i: number) => {
@@ -81,11 +81,9 @@ export default function Hero() {
   }
 
   return (
-    <section className="min-h-[80vh] flex items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 px-4 relative overflow-hidden">
+    <section className="min-h-[80vh] flex items-center justify-center bg-[var(--bg)] px-4 relative overflow-hidden">
       {/* Background Effects */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-900/20 via-transparent to-transparent"></div>
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(1200px_600px_at_50%_-100px,rgba(59,130,246,0.12),transparent)]"></div>
       {/* Meteors background */}
       <Meteors count={14} />
 
@@ -121,7 +119,7 @@ export default function Hero() {
                   transition={{ duration: 0.5, ease: 'easeOut' }}
                   className="absolute inset-0 flex items-center justify-center"
                 >
-                  <span className="text-4xl md:text-6xl font-bold text-white leading-tight">
+                  <span className="text-4xl md:text-6xl font-bold text-[var(--text)] leading-tight">
                     {renderTitle(index)}
                   </span>
                 </motion.div>
@@ -134,7 +132,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.6 }}
-            className="text-lg md:text-xl text-slate-300 max-w-4xl mx-auto leading-relaxed"
+            className="text-lg md:text-xl text-[var(--text-muted)] max-w-4xl mx-auto leading-relaxed"
           >
             {/* Subtítulo com 1 destaque máximo */}
             N8N/Make, APIs, SQL/NoSQL, Docker, <span className={highlight}>LangChain/RAG</span>. Integro sistemas e CRM/BI para operação mensurável; marketing como camada de apoio.
@@ -144,7 +142,7 @@ export default function Hero() {
         </motion.div>
       </div>
       {/* Bottom fade to blend into Roles */}
-      <div className="pointer-events-none absolute bottom-0 inset-x-0 h-24 bg-gradient-to-b from-transparent to-slate-800/80" />
+      <div className="pointer-events-none absolute bottom-0 inset-x-0 h-24 bg-gradient-to-b from-transparent to-[color:rgba(255,255,255,0.04)]" />
     </section>
   )
 }

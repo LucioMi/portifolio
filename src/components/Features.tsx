@@ -46,7 +46,7 @@ const Features = () => {
   ];
 
   return (
-    <section className="py-24 bg-slate-900 relative overflow-hidden">
+    <section className="py-24 bg-[var(--surface)] relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-slate-800/50 via-transparent to-transparent"></div>
       
@@ -58,13 +58,13 @@ const Features = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-[var(--text)] mb-6">
             Minhas{' '}
             <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
               3 Frentes
             </span>
           </h2>
-          <p className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-[var(--text-muted)] max-w-3xl mx-auto leading-relaxed">
             Atuo em três áreas complementares, com <strong className="text-blue-400">automação como foco principal</strong>, 
             criando sinergia entre tecnologia, dados e estratégia.
           </p>

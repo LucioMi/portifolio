@@ -76,7 +76,7 @@ const Skills = () => {
   ];
 
   return (
-    <section className="py-24 bg-slate-900 relative overflow-hidden">
+    <section className="py-24 bg-[var(--bg)] relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-slate-800/50 via-transparent to-transparent"></div>
       
@@ -88,12 +88,12 @@ const Skills = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-[var(--text)] mb-6">
             <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
               Habilidades
             </span>
           </h2>
-          <p className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-[var(--text-muted)] max-w-3xl mx-auto leading-relaxed">
             Construo e opero automações e integrações; organizo CRM & BI para decisão. Marketing entra como apoio para conectar aquisição ao pipeline.
           </p>
         </motion.div>
@@ -167,12 +167,7 @@ const Skills = () => {
                     {/* Removido: badge de nível */}
 
                     {/* Hover Effect */}
-                    <div className={`
-                      absolute inset-0 rounded-2xl pointer-events-none transition-all duration-300
-                      opacity-0 group-hover:opacity-100
-                      ring-1 ring-white/10 group-hover:ring-white/25
-                      bg-gradient-to-br from-transparent via-transparent to-white/5
-                    `}></div>
+                    <div className="absolute inset-0 rounded-2xl pointer-events-none transition-all duration-300 opacity-0 group-hover:opacity-100 ring-1 ring-white/10 group-hover:ring-white/25 bg-gradient-to-br from-transparent via-transparent to-white/5"></div>
                   </motion.div>
                 ))}
               </div>

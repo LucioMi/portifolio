@@ -3,6 +3,23 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  /* Global color tokens */
+  --bg: #0A0A0A;
+  --surface: #0F1115;
+  --surface-2: #12141A;
+  --border: rgba(255,255,255,0.08);
+
+  --text: #E6E8EC;
+  --text-muted: #9AA3AE;
+
+  --blue-400: #60A5FA;
+  --blue-500: #3B82F6;
+  --blue-600: #2563EB;
+
+  --violet-400: #A78BFA;
+  --violet-500: #8B5CF6;
+  --violet-600: #7C3AED;
 }
 
 @theme inline {
@@ -23,6 +40,16 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Base tokens applied via Tailwind */
+@layer base {
+  html, body {
+    @apply bg-[var(--bg)] text-[var(--text)];
+  }
+  a {
+    @apply text-[var(--blue-400)] hover:text-[var(--blue-500)];
+  }
 }
 
 /* Meteors effect */

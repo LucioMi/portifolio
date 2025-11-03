@@ -54,7 +54,7 @@ const Navbar = () => {
       transition={{ duration: 0.5 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled 
-          ? 'bg-slate-900/95 backdrop-blur-md border-b border-white/10' 
+          ? 'bg-[var(--bg)]/95 backdrop-blur-md border-b border-[var(--border)]' 
           : 'bg-transparent'
       }`}
     >
@@ -81,15 +81,15 @@ const Navbar = () => {
                 onClick={() => scrollToSection(item.id)}
                 className={`relative px-3 py-2 text-sm font-medium transition-colors duration-200 ${
                   activeSection === item.id
-                    ? 'text-blue-400'
-                    : 'text-slate-300 hover:text-white'
+                    ? 'text-[var(--blue-400)]'
+                    : 'text-[var(--text-muted)] hover:text-[var(--text)]'
                 }`}
               >
                 {item.label}
                 {activeSection === item.id && (
                   <motion.div
                     layoutId="activeSection"
-                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-400 to-purple-400"
+                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-[var(--blue-400)] to-[var(--violet-400)]"
                     initial={false}
                     transition={{ type: "spring", stiffness: 380, damping: 30 }}
                   />
@@ -116,14 +116,14 @@ const Navbar = () => {
 
         {/* Mobile Menu Panel */}
         <div className={`md:hidden ${isMenuOpen ? 'block' : 'hidden'}`}>
-          <div className="mt-2 bg-slate-900/95 backdrop-blur-md border border-white/10 rounded-lg shadow-lg">
+          <div className="mt-2 bg-[var(--bg)]/95 backdrop-blur-md border border-[var(--border)] rounded-lg shadow-lg">
             <div className="flex flex-col py-2">
               {navItems.map((item) => (
                 <button
                   key={item.id}
                   onClick={() => { scrollToSection(item.id); setIsMenuOpen(false); }}
                   className={`text-left px-4 py-3 text-sm font-medium transition-colors duration-200 ${
-                    activeSection === item.id ? 'text-blue-400' : 'text-slate-300 hover:text-white'
+                    activeSection === item.id ? 'text-[var(--blue-400)]' : 'text-[var(--text-muted)] hover:text-[var(--text)]'
                   }`}
                 >
                   {item.label}
