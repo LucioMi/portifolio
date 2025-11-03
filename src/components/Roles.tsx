@@ -17,15 +17,15 @@ export default function Roles() {
       color: "purple"
     },
     {
-      title: "Marketing como apoio",
-      description: "Tenho 5 anos de experiência com marketing e tráfego, uso isso para integrar aquisição ao CRM e provar resultado, mas não é meu foco principal.",
+      title: "Marketing",
+      description: "Tenho sólida experiência prática em marketing e tráfego e uso isso para integrar aquisição ao CRM, qualificar leads e comprovar resultado.",
       icon: "🎯",
       color: "green"
     }
   ]
 
   return (
-    <section className="py-16 bg-slate-800 relative overflow-hidden">
+    <section className="pt-8 pb-16 bg-slate-800 relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-slate-700/50 via-transparent to-transparent"></div>
       
@@ -70,13 +70,6 @@ export default function Roles() {
                 <p className="text-slate-300 leading-relaxed">
                   {role.description}
                 </p>
-                {role.title === "Marketing como apoio" && (
-                  <div className="mt-3">
-                    <span className="inline-block px-3 py-1 bg-green-500/20 text-green-300 text-sm font-medium rounded-full border border-green-400/30">
-                      Competência de apoio
-                    </span>
-                  </div>
-                )}
               </div>
             </motion.div>
           ))}

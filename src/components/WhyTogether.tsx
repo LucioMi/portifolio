@@ -156,45 +156,7 @@ const WhyTogether = () => {
             ))}
           </div>
 
-          {/* Benefits Cards */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            viewport={{ once: true }}
-            className="grid md:grid-cols-3 gap-6 mt-16"
-          >
-            {[
-              {
-                title: "Integração Perfeita",
-                description: "Cada sistema conversa com o outro, eliminando trabalho manual e retrabalho.",
-                icon: "🔗"
-              },
-              {
-                title: "Visão 360°",
-                description: "Acompanho o lead desde o primeiro clique até o fechamento e pós-venda.",
-                icon: "👁️"
-              },
-              {
-                title: "Otimização Contínua",
-                description: "Dados de todas as etapas alimentam melhorias constantes no processo.",
-                icon: "📈"
-              }
-            ].map((benefit, index) => (
-              <motion.div
-                key={benefit.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
-                viewport={{ once: true }}
-                className="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm hover:bg-white/10 transition-all duration-300 text-center"
-              >
-                <div className="text-4xl mb-4">{benefit.icon}</div>
-                <h3 className="text-white font-bold text-lg mb-3">{benefit.title}</h3>
-                <p className="text-slate-400 leading-relaxed">{benefit.description}</p>
-              </motion.div>
-            ))}
-          </motion.div>
+          {/* Benefits Cards removidos conforme solicitação */}
 
           {/* CTA */}
 
