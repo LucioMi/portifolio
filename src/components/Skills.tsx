@@ -23,6 +23,7 @@ const Skills = () => {
         { name: "Docker", level: "Avançado", description: "Containerização e deploy" },
         { name: "NoSQL", level: "Avançado", description: "Modelagem e integração de bases não relacionais" },
         { name: "RAG", level: "Avançado", description: "Integração de IA com Retrieval-Augmented Generation" },
+        { name: "MCP", level: "Avançado", description: "Integração via Model Context Protocol para agentes e ferramentas" },
         { name: "Python", level: "Avançado", description: "Scripts e automações backend" },
         { name: "JavaScript", level: "Avançado", description: "Integrações e utilitários web" },
         { name: "Prototipação rápida e code review", level: "Operacional", description: "Construção ágil de provas de conceito e revisão de código (vibe coding)" },

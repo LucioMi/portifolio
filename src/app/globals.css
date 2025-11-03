@@ -24,3 +24,31 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Meteors effect */
+@keyframes meteor {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 0, 0) rotate(45deg);
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(110vw, 60vh, 0) rotate(45deg);
+  }
+}
+
+.meteor {
+  position: absolute;
+  width: 2px;
+  height: 120px;
+  background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.9), rgba(56, 189, 248, 0));
+  box-shadow: 0 0 8px rgba(56, 189, 248, 0.35);
+  border-radius: 9999px;
+  will-change: transform, opacity;
+  animation-name: meteor;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
