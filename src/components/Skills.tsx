@@ -93,8 +93,7 @@ const Skills = () => {
             </span>
           </h2>
           <p className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
-            Venho do marketing e tráfego (5 anos), então sei conversar com a área e integrar leads à operação. 
-            Hoje meu foco é montar a <strong className="text-blue-400">máquina</strong>, não só a campanha.
+            Construo e opero automações e integrações; organizo CRM & BI para decisão. Marketing entra como apoio para conectar aquisição ao pipeline.
           </p>
         </motion.div>
 

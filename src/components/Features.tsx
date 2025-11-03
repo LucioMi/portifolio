@@ -84,13 +84,16 @@ const Features = () => {
               `}
             >
               {/* Card */}
-              <div className={`
-                h-full p-8 rounded-3xl backdrop-blur-sm border transition-all duration-500
-                bg-gradient-to-br ${feature.bgGradient}
-                ${feature.borderColor} ${feature.hoverBorder}
-                hover:scale-105 hover:shadow-2xl hover:shadow-white/10
-                ${feature.isPrimary ? 'ring-2 ring-blue-400/20' : ''}
-              `}>
+              <motion.div
+                className={`
+                  relative h-full p-8 rounded-3xl backdrop-blur-sm border transition-all duration-300
+                  bg-gradient-to-br ${feature.bgGradient}
+                  ${feature.borderColor} ${feature.hoverBorder}
+                  ${feature.isPrimary ? 'ring-2 ring-blue-400/20' : ''}
+                `}
+                whileHover={{ scale: 1.01 }}
+                transition={{ type: 'tween', duration: 0.2 }}
+              >
 
 
                 {/* Icon */}
@@ -137,12 +140,14 @@ const Features = () => {
                   </div>
                 </div>
 
-                {/* Hover Effect */}
-                <div className={`
-                  absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500
-                  bg-gradient-to-br ${feature.gradient} opacity-5
-                `}></div>
-              </div>
+                {/* Hover Shine Effect (novo e não intrusivo) */}
+                <motion.div
+                  className="pointer-events-none absolute top-0 left-[-20%] h-full w-1/3 rounded-3xl bg-gradient-to-r from-transparent via-white/12 to-transparent mix-blend-screen"
+                  initial={{ opacity: 0, x: -120 }}
+                  whileHover={{ opacity: 1, x: 520 }}
+                  transition={{ type: 'tween', duration: 0.8, ease: 'easeOut' }}
+                />
+              </motion.div>
             </motion.div>
           ))}
         </div>
