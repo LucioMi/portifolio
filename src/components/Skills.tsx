@@ -7,21 +7,26 @@ const Skills = () => {
     {
       id: 1,
       title: "Automação & Integração",
-      subtitle: "Foco Principal",
+      subtitle: "Automação e desenvolvimento (low-code e código sob medida)",
       icon: "⚡",
       gradient: "from-blue-600 to-cyan-600",
       bgGradient: "from-blue-500/10 to-cyan-500/10",
       borderColor: "border-blue-400/30",
-      isPrimary: true,
+      isPrimary: false,
       skills: [
-        { name: "n8n", level: "Domínio", description: "Automações complexas e integrações" },
-        { name: "Make (Zapier)", level: "Domínio", description: "Workflows e conectores" },
+        { name: "N8N", level: "Domínio", description: "Automações complexas e integrações" },
+        { name: "Make", level: "Domínio", description: "Workflows e conectores" },
         { name: "APIs REST", level: "Domínio", description: "Integração entre sistemas" },
-        { name: "PostgreSQL", level: "Domínio", description: "Banco de dados relacional" },
+        { name: "SQL", level: "Domínio", description: "Bancos relacionais e consultas" },
         { name: "Webhooks", level: "Domínio", description: "Comunicação em tempo real" },
         { name: "JSON/XML", level: "Domínio", description: "Manipulação de dados" },
         { name: "Docker", level: "Avançado", description: "Containerização e deploy" },
-        { name: "MongoDB", level: "Avançado", description: "Banco de dados NoSQL" }
+        { name: "NoSQL", level: "Avançado", description: "Modelagem e integração de bases não relacionais" },
+        { name: "RAG", level: "Avançado", description: "Integração de IA com Retrieval-Augmented Generation" },
+        { name: "Python", level: "Avançado", description: "Scripts e automações backend" },
+        { name: "JavaScript", level: "Avançado", description: "Integrações e utilitários web" },
+        { name: "Prototipação rápida e code review", level: "Operacional", description: "Construção ágil de provas de conceito e revisão de código (vibe coding)" },
+        { name: "IAs/LLMs", level: "Avançado", description: "Domínio em agentes, RAG e orquestração de pipelines (LangChain/LangGraph), integrados a CRM e dados via N8N/Make & APIs REST." }
       ]
     },
     {
@@ -46,7 +51,7 @@ const Skills = () => {
     },
     {
       id: 3,
-      title: "Marketing (5 anos de experiência)",
+      title: "Marketing",
       subtitle: "Competência de apoio",
       icon: "🎯",
       gradient: "from-green-600 to-emerald-600",
@@ -130,7 +135,7 @@ const Skills = () => {
               </div>
 
               {/* Skills Grid */}
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+              <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-4">
                 {category.skills.map((skill, skillIndex) => (
                   <motion.div
                     key={skill.name}
@@ -139,10 +144,10 @@ const Skills = () => {
                     transition={{ duration: 0.5, delay: categoryIndex * 0.2 + skillIndex * 0.05 }}
                     viewport={{ once: true }}
                     className={`
-                      p-4 rounded-2xl backdrop-blur-sm border transition-all duration-300
+                      p-4 rounded-2xl relative backdrop-blur-sm border transition-all duration-300
                       bg-gradient-to-br ${category.bgGradient}
                       ${category.borderColor} hover:border-opacity-60
-                      hover:scale-105 hover:shadow-lg hover:shadow-white/5
+                      hover:scale-105 hover:shadow-lg hover:shadow-white/10
                       group cursor-pointer
                     `}
                   >
@@ -152,27 +157,18 @@ const Skills = () => {
                     </h4>
                     
                     {/* Skill Description */}
-                    <p className="text-slate-400 text-sm mb-3 leading-tight">
+                    <p className="text-slate-400 text-sm mb-3 leading-tight transition-colors group-hover:text-slate-300">
                       {skill.description}
                     </p>
 
-                    {/* Skill Level Badge */}
-                    <div className="flex justify-between items-center">
-                      <span className="text-slate-300 text-xs font-medium">Nível</span>
-                      <span className={`
-                        text-xs font-medium px-2 py-1 rounded-full
-                        ${skill.level === 'Domínio' ? 'bg-blue-500/20 text-blue-300 border border-blue-400/30' :
-                          skill.level === 'Avançado' ? 'bg-purple-500/20 text-purple-300 border border-purple-400/30' :
-                          'bg-slate-500/20 text-slate-300 border border-slate-400/30'}
-                      `}>
-                        {skill.level}
-                      </span>
-                    </div>
+                    {/* Removido: badge de nível */}
 
                     {/* Hover Effect */}
                     <div className={`
-                      absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300
-                      bg-gradient-to-br ${category.gradient} opacity-5
+                      absolute inset-0 rounded-2xl pointer-events-none transition-all duration-300
+                      opacity-0 group-hover:opacity-100
+                      ring-1 ring-white/10 group-hover:ring-white/25
+                      bg-gradient-to-br from-transparent via-transparent to-white/5
                     `}></div>
                   </motion.div>
                 ))}
