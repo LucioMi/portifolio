@@ -59,10 +59,11 @@ const Skills = () => {
       borderColor: "border-green-400/30",
       isPrimary: false,
       skills: [
+        { name: "Estratégias de Marketing", level: "Avançado", description: "hipóteses → testes → mensuração → aprendizado integrado" },
         { name: "UTM Tracking", level: "Operacional", description: "Rastreamento de campanhas" },
         { name: "Landing Pages", level: "Operacional", description: "Páginas de conversão" },
-        { name: "Google Ads", level: "Operacional", description: "Campanhas de busca e display" },
-        { name: "Facebook Ads", level: "Operacional", description: "Social media advertising" },
+        { name: "Google Ads", level: "Operacional", description: "campanhas de marketing no google e youtube." },
+        { name: "Meta ads", level: "Operacional", description: "campanhas de marketing no facebook e instagram" },
         { name: "Email Marketing", level: "Operacional", description: "Automação de email" },
         { name: "A/B Testing", level: "Operacional", description: "Testes e otimização" },
         { name: "Pixel Tracking", level: "Operacional", description: "Rastreamento de conversões" },
