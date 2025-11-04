@@ -48,7 +48,8 @@ const Skills = () => {
         { name: "Tracking & Atribuição de Origem", level: "Avançado", description: "UTM/Source/Medium/Campaign conectados ao negócio para provar resultado." },
         { name: "ETL/ELT & Integrações", level: "Avançado", description: "Ingestão e sincronização de CRM/Ads para DW/lake com rotinas escaláveis." },
         { name: "Métricas de Funil & SLA", level: "Avançado", description: "Conversões por estágio, aging de pipeline e tempo de resposta acionável." },
-        { name: "Segmentação & Audiences", level: "Avançado", description: "Regras dinâmicas por perfil/comportamento para nutrição, reativação e upsell." }
+        { name: "Segmentação & Audiences", level: "Avançado", description: "Regras dinâmicas por perfil/comportamento para nutrição, reativação e upsell." },
+        { name: "CRMs", level: "Avançado", description: "Kommo, HubSpot, GoHighLevel e RD Station CRM" }
         
       ]
     },
