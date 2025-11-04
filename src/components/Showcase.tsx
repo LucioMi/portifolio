@@ -8,8 +8,8 @@ const Showcase = () => {
       id: 1,
       title: "Automação de entrada de leads → CRM → WhatsApp",
       category: "Automação",
-      description: "Fluxo que captura leads de formulários, qualifica automaticamente no CRM e dispara mensagens personalizadas no WhatsApp.",
-      technologies: ["N8N", "HubSpot", "WhatsApp API"],
+      description: "Fluxo ponta a ponta que captura o lead no formulário, valida e deduplica dados, enriquece informações e qualifica automaticamente (regras/score). Em seguida, dispara mensagens personalizadas no WhatsApp com gatilhos por estágio, registra atividades e monitora SLA de 1º contato, taxa de resposta e conversão por etapa — tudo orquestrado por integrações via API/Webhooks e rotinas de dados para manter o funil limpo e mensurável.",
+      technologies: ["Go High Level", "N8N", "Whatsapp API", "SQL", "LLMs"],
       icon: "⚡",
       gradient: "from-[var(--blue-600)] to-[var(--violet-600)]",
       bgGradient: "from-[var(--blue-600)/24] to-[var(--violet-600)/24]"
@@ -18,8 +18,8 @@ const Showcase = () => {
       id: 2,
       title: "Padronização de funil e campos para reporting",
       category: "CRM & BI",
-      description: "Organização da base de dados, criação de campos padronizados e dashboards para acompanhamento de métricas de vendas.",
-      technologies: ["Kommo", "Looker Studio", "SQL"],
+      description: "Projeto de normalização do CRM: definição de estágios, campos padronizados e nomenclaturas; criação de regras de atualização automática e segmentações; e implantação de dashboards operacionais/gerenciais (conversões por estágio, aging do pipeline e SLA). O objetivo é garantir dados confiáveis para análise e decisões, permitindo comparar times/segmentos e rodar rotinas de ETL/ELT quando necessário.",
+      technologies: ["HubSpot", "Power BI", "ETL/ELT", "Webhooks", "N8N"],
       icon: "📊",
       gradient: "from-[var(--violet-500)] to-[var(--blue-500)]",
       bgGradient: "from-[var(--violet-500)/22] to-[var(--blue-500)/22]"
@@ -28,8 +28,18 @@ const Showcase = () => {
       id: 3,
       title: "Integração tráfego/ads → CRM para provar campanha",
       category: "Marketing + CRM",
-      description: "Conexão entre campanhas de tráfego e CRM para rastreamento completo do ROI e atribuição de conversões.",
-      technologies: ["Google Ads", "Facebook Ads", "HubSpot", "UTMs"],
+      description: "Conexão de UTMs completas (source/medium/campaign) entre canais de aquisição e o CRM, com mapeamento de leads/negócios e atribuição de receita por campanha. Inclui normalização de origem, envio/ingestão via APIs, eventos e webhooks, além de conversions e painéis que fecham o ciclo clique → lead → oportunidade → venda, permitindo cortar mídia ineficiente e escalar o que dá retorno.",
+      technologies: [
+        "Google Ads",
+        "Meta Ads",
+        "UTMs",
+        "Kommo",
+        "N8N",
+        "APIs REST",
+        "Webhooks",
+        "SQL",
+        "Analytics"
+      ],
       icon: "🎯",
       gradient: "from-[var(--blue-500)] to-[var(--violet-400)]",
       bgGradient: "from-[var(--blue-700)/20] to-[var(--violet-700)/20]"
@@ -37,13 +47,17 @@ const Showcase = () => {
     {
       id: 4,
       title: "Agente SDR/Closer — Atendimento, Métricas e Agendamento",
-      category: "Vendas",
+      category: "Automação",
       description: "Fluxo completo de pré-venda e fechamento: atendimento imediato ao lead, qualificação com prompts orientados por LLMs, registro e acompanhamento de métricas (SLA de 1º contato, taxa de resposta, taxa de show e conversão por etapa) e agendamento automático com confirmação/lembrantes. Integração direta ao CRM para atualizar estágios, notas e tarefas, além de follow-ups multicanal.",
       technologies: [
         "Evolution API",
         "Kommo",
         "Calendly",
-        "LLMs (roteiros de qualificação e follow-up)"
+        "N8N",
+        "APIs REST",
+        "SQL",
+        "Webhooks",
+        "LLMs"
       ],
       icon: "🤝",
       gradient: "from-[var(--violet-600)] to-[var(--blue-600)]",
