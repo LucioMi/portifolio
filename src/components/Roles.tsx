@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Meteors from './Meteors'
 
 export default function Roles() {
   const roles = [
@@ -26,8 +27,10 @@ export default function Roles() {
 
   return (
     <section className="pt-8 pb-16 bg-[var(--bg)] relative overflow-hidden">
-      {/* Background Effects */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-900/10 via-transparent to-transparent"></div>
+      {/* Background Effects alinhados ao Hero */}
+      <div className="absolute inset-0 bg-[radial-gradient(1200px_600px_at_50%_-100px,rgba(255,255,255,0.06),transparent)]"></div>
+      {/* Meteors para replicar o efeito visual do Hero */}
+      <Meteors count={14} />
       
       <div className="max-w-6xl mx-auto px-4 relative z-10">
         <motion.div

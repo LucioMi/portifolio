@@ -83,7 +83,7 @@ export default function Hero() {
   return (
     <section className="min-h-[80vh] flex items-center justify-center bg-[var(--bg)] px-4 relative overflow-hidden">
       {/* Background Effects */}
-      <div className="absolute inset-0 bg-[radial-gradient(1200px_600px_at_50%_-100px,rgba(59,130,246,0.12),transparent)]"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(1200px_600px_at_50%_-100px,rgba(255,255,255,0.06),transparent)]"></div>
       {/* Meteors background */}
       <Meteors count={14} />
 
