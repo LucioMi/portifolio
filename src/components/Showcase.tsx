@@ -9,7 +9,7 @@ const Showcase = () => {
       title: "Automação de entrada de leads → CRM → WhatsApp",
       category: "Automação",
       description: "Fluxo que captura leads de formulários, qualifica automaticamente no CRM e dispara mensagens personalizadas no WhatsApp.",
-      technologies: ["n8n", "HubSpot", "WhatsApp API"],
+      technologies: ["N8N", "HubSpot", "WhatsApp API"],
       icon: "⚡",
       gradient: "from-[var(--blue-600)] to-[var(--violet-600)]",
       bgGradient: "from-[var(--blue-600)/24] to-[var(--violet-600)/24]"
@@ -19,7 +19,7 @@ const Showcase = () => {
       title: "Padronização de funil e campos para reporting",
       category: "CRM & BI",
       description: "Organização da base de dados, criação de campos padronizados e dashboards para acompanhamento de métricas de vendas.",
-      technologies: ["HubSpot", "Looker Studio", "SQL"],
+      technologies: ["Kommo", "Looker Studio", "SQL"],
       icon: "📊",
       gradient: "from-[var(--violet-500)] to-[var(--blue-500)]",
       bgGradient: "from-[var(--violet-500)/22] to-[var(--blue-500)/22]"
@@ -33,6 +33,52 @@ const Showcase = () => {
       icon: "🎯",
       gradient: "from-[var(--blue-500)] to-[var(--violet-400)]",
       bgGradient: "from-[var(--blue-700)/20] to-[var(--violet-700)/20]"
+    },
+    {
+      id: 4,
+      title: "Agente SDR/Closer — Atendimento, Métricas e Agendamento",
+      category: "Vendas",
+      description: "Fluxo completo de pré-venda e fechamento: atendimento imediato ao lead, qualificação com prompts orientados por LLMs, registro e acompanhamento de métricas (SLA de 1º contato, taxa de resposta, taxa de show e conversão por etapa) e agendamento automático com confirmação/lembrantes. Integração direta ao CRM para atualizar estágios, notas e tarefas, além de follow-ups multicanal.",
+      technologies: [
+        "Evolution API",
+        "Kommo",
+        "Calendly",
+        "LLMs (roteiros de qualificação e follow-up)"
+      ],
+      icon: "🤝",
+      gradient: "from-[var(--violet-600)] to-[var(--blue-600)]",
+      bgGradient: "from-[var(--violet-600)/22] to-[var(--blue-600)/22]"
+    },
+    {
+      id: 5,
+      title: "Automação Interna — Circuito de NPS (App Próprio)",
+      category: "Automação Interna",
+      description: "Disparo automático de NPS via WhatsApp API para clientes e colaboradores em marcos da jornada; coleta das notas (0–10) e feedbacks, cálculo de NPS e classificação por temas/sentimento. App próprio em Vibe Coding centraliza histórico, tendências, tags e comparativos por período/equipe — funcionando como um BI de satisfação para a agência, com alertas para fechamento de loop e relatórios executivos.",
+      technologies: [
+        "WhatsApp API",
+        "Vibe Coding",
+        "Webhooks/API",
+        "Google Sheets/BigQuery"
+      ],
+      icon: "📈",
+      gradient: "from-[var(--blue-600)] to-[var(--violet-600)]",
+      bgGradient: "from-[var(--blue-600)/24] to-[var(--violet-600)/24]"
+    },
+    {
+      id: 6,
+      title: "Automação Interna — Onboarding para Agência de Marketing",
+      category: "Automação Interna",
+      description: "Fluxo orquestrado de onboarding: criação automática de tarefas para colaboradores no ClickUp, geração de grupos de WhatsApp, pastas no Drive e documentos dentro dessas pastas; sistema de avisos (lembretes/notificações) e mecanismo de troca/substituição de colaboradores com handoff de responsabilidades. Tudo padronizado para reduzir tempo de ativação e evitar gargalos entre áreas.",
+      technologies: [
+        "ClickUp",
+        "WhatsApp API",
+        "Google Drive/Docs",
+        "Webhooks/API",
+        "N8N"
+      ],
+      icon: "🚀",
+      gradient: "from-[var(--violet-500)] to-[var(--blue-500)]",
+      bgGradient: "from-[var(--violet-500)/22] to-[var(--blue-500)/22]"
     }
   ];
 
