@@ -57,6 +57,8 @@ const Showcase = () => {
         "APIs REST",
         "SQL",
         "Webhooks",
+        "LangChain",
+        "Langfuse",
         "LLMs"
       ],
       icon: "🤝",
