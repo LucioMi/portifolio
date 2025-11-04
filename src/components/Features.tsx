@@ -11,8 +11,8 @@ const Features = () => {
       description: "Orquestro fluxos complexos integrando APIs, bancos de dados e CRMs. Especialista em n8n, Make, Docker e automações que conectam sistemas diversos para otimizar processos de negócio.",
       icon: "⚡",
       technologies: ["N8N", "APIs REST", "Docker", "SQL/NoSQL", "RAG", "Python", "LLMs"],
-      gradient: "from-blue-600 to-cyan-600",
-      bgGradient: "from-blue-500/10 to-cyan-500/10",
+      gradient: "from-[var(--blue-600)] to-[var(--blue-500)]",
+      bgGradient: "from-[var(--blue-600)/24] to-[var(--blue-500)/24]",
       borderColor: "border-blue-400/30",
       hoverBorder: "hover:border-blue-400/60",
       isPrimary: true
@@ -24,10 +24,10 @@ const Features = () => {
       description: "Modelo funis de vendas, crio campos customizados, segmento leads e desenvolvo automações internas. Transformo dados em insights acionáveis através de dashboards e relatórios estratégicos.",
       icon: "📊",
       technologies: ["GoHighLevel", "Kommo", "Pipedrive", "Power BI", "SQL", "Segmentação", "Dashboards"],
-      gradient: "from-emerald-600 to-teal-600",
-      bgGradient: "from-emerald-500/10 to-teal-500/10",
-      borderColor: "border-emerald-400/30",
-      hoverBorder: "hover:border-emerald-400/60",
+      gradient: "from-[var(--blue-500)] to-[var(--violet-500)]",
+      bgGradient: "from-[var(--blue-500)/22] to-[var(--violet-500)/22]",
+      borderColor: "border-violet-400/30",
+      hoverBorder: "hover:border-violet-400/60",
       isPrimary: false
     },
     {
@@ -37,10 +37,10 @@ const Features = () => {
       description: "Planejo e executo campanhas de aquisição de leads, integrando perfeitamente com CRM e automações. Foco na qualidade do lead e na otimização do ciclo completo de conversão.",
       icon: "🎯",
       technologies: ["Google Ads", "Facebook Ads", "Landing Pages", "UTMs", "Analytics", "Conversão"],
-      gradient: "from-orange-600 to-pink-600",
-      bgGradient: "from-orange-500/10 to-pink-500/10",
-      borderColor: "border-orange-400/30",
-      hoverBorder: "hover:border-orange-400/60",
+      gradient: "from-[var(--violet-600)] to-[var(--violet-500)]",
+      bgGradient: "from-[var(--violet-600)/24] to-[var(--violet-500)/24]",
+      borderColor: "border-violet-400/30",
+      hoverBorder: "hover:border-violet-400/60",
       isPrimary: false
     }
   ];
