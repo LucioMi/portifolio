@@ -23,7 +23,7 @@ const Features = () => {
       subtitle: "Funis e Métricas",
       description: "Modelo funis de vendas, crio campos customizados, segmento leads e desenvolvo automações internas. Transformo dados em insights acionáveis através de dashboards e relatórios estratégicos.",
       icon: "📊",
-      technologies: ["GoHighLevel", "Kommo", "Pipedrive", "Power BI", "SQL", "Segmentação", "Dashboards"],
+      technologies: ["GoHighLevel", "Kommo", "Power BI", "SQL", "Segmentação", "Dashboards"],
       gradient: "from-[var(--blue-500)] to-[var(--violet-500)]",
       bgGradient: "from-[var(--blue-500)/22] to-[var(--violet-500)/22]",
       borderColor: "border-violet-400/30",
